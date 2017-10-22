@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var tfEcuacion: UITextField!
-    @IBOutlet weak var lbDerivada: UILabel!
+    
+    struct Problemas {
+        let strID : String
+        let imgProblema : UIImage
+        let arrSolPrimera : UIImage
+        let arrSolSegunda : UIImage
+        let arrSolTercera : UIImage
+    }
+    
+    var imageList = [Problemas]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        /*imageList.append(Problemas(strID: "sen^2", imgProblema: #imageLiteral(resourceName: "imgSinX2"), arrSolPrimera: <#T##[UIImage]#>, arrSolSegunda: <#T##[UIImage]#>, arrSolTercera: <#T##[UIImage]#>))*/
     }
 
     override func didReceiveMemoryWarning() {
