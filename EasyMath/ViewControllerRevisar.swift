@@ -70,6 +70,9 @@ class ViewControllerRevisar: UIViewController {
             ){
             print("entro")
             playSound()
+//            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
             print("salio")
         }
         else {
@@ -80,6 +83,9 @@ class ViewControllerRevisar: UIViewController {
             cexp2.text = String(Int(exp2.text!)!-1)
             cexp3.text = String(Int(exp3.text!)!-1)
             ccoef4.text = "0"
+//            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
             showVals()
         }
     }
@@ -116,14 +122,8 @@ class ViewControllerRevisar: UIViewController {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
-            
-            
-            
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            /* iOS 10 and earlier require the following line:
-             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
             
             guard let player = player else { return }
             
