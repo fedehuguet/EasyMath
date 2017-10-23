@@ -37,10 +37,32 @@ class ViewControllerRevisar: UIViewController {
     @IBOutlet weak var ccoef3: UILabel!
     @IBOutlet weak var cexp3: UILabel!
     @IBOutlet weak var ccoef4: UILabel!
+    @IBOutlet weak var x1: UILabel!
+    @IBOutlet weak var mas1: UILabel!
+    @IBOutlet weak var x2: UILabel!
+    @IBOutlet weak var mas2: UILabel!
+    @IBOutlet weak var x3: UILabel!
+    @IBOutlet weak var mas3: UILabel!
+    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRand(true)
+        self.view.backgroundColor = UIColor.orange
+        
+        // 2
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        let color2 = UIColor.clear.cgColor as CGColor
+        let color3 = UIColor.red
+        gradientLayer.colors = [color2, color3]
+        
+        // 4
+        gradientLayer.locations = [0.25, 1]
+        
+        // 5
+        self.view.layer.addSublayer(gradientLayer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,6 +120,12 @@ class ViewControllerRevisar: UIViewController {
         ccoef3.isHidden = true
         cexp3.isHidden = true
         ccoef4.isHidden = true
+        x1.isHidden = true
+        x2.isHidden = true
+        x3.isHidden = true
+        mas1.isHidden = true
+        mas2.isHidden = true
+        mas3.isHidden = true
         ucoef1.text = ""
         uexp1.text = ""
         ucoef2.text = ""
@@ -114,6 +142,12 @@ class ViewControllerRevisar: UIViewController {
         ccoef3.isHidden = false
         cexp3.isHidden = false
         ccoef4.isHidden = false
+        x1.isHidden = false
+        x2.isHidden = false
+        x3.isHidden = false
+        mas1.isHidden = false
+        mas2.isHidden = false
+        mas3.isHidden = false
     }
 
     func playSound() {
