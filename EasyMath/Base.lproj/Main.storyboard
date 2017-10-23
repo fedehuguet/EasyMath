@@ -494,37 +494,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJw-PQ-uJZ">
-                                <rect key="frame" x="16" y="95" width="165" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AS-7d-coD">
-                                <rect key="frame" x="16" y="133" width="79" height="30"/>
+                                <rect key="frame" x="228" y="246" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Derivar"/>
+                                <state key="normal" title="Generar"/>
+                                <connections>
+                                    <action selector="GenerarEcuacion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9tJ-xv-Eus"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9R-1K-Xhb">
-                                <rect key="frame" x="220" y="100" width="99" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-qh-ApH">
+                                <rect key="frame" x="67" y="110" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HZs-Xx-aSU">
+                                <rect key="frame" x="16" y="284" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Primera"/>
+                                    <segment title="Segunda"/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="CambiaDerivada:" destination="BYZ-38-t0r" eventType="valueChanged" id="cHP-lt-3x7"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU1-8O-zDn">
+                                <rect key="frame" x="245" y="595" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mostrar Pasos"/>
+                                <connections>
+                                    <action selector="MostrarPasos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmV-ea-Axf"/>
+                                    <segue destination="tRy-ha-9U7" kind="presentation" id="GsP-Mm-azm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSY-Iu-aR5">
+                                <rect key="frame" x="62" y="395" width="251" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44932293509999999" green="0.86183635950000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="lbDerivada" destination="a9R-1K-Xhb" id="KX6-YD-7LA"/>
-                        <outlet property="tfEcuacion" destination="QJw-PQ-uJZ" id="SVP-Pz-4W7"/>
+                        <outlet property="btnMostrar" destination="fU1-8O-zDn" id="K99-bh-7Cj"/>
+                        <outlet property="imagenProblema" destination="CRE-qh-ApH" id="Fbq-zc-Pbj"/>
+                        <outlet property="imagenSolucion" destination="HSY-Iu-aR5" id="DEh-TV-rF1"/>
+                        <outlet property="segDerivada" destination="HZs-Xx-aSU" id="yKh-59-7ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-159"/>
+            <point key="canvasLocation" x="248.80000000000001" y="-159.67016491754123"/>
+        </scene>
+        <!--View Controller Pasos-->
+        <scene sceneID="XdN-QD-FIr">
+            <objects>
+                <viewController id="tRy-ha-9U7" customClass="ViewControllerPasos" customModule="EasyMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ca-W4-B3D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="smR-Zm-dEb">
+                                <rect key="frame" x="16" y="59" width="343" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-4P-hTU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Ryh-5O-QTE">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="R0i-Zx-AQq">
+                                            <connections>
+                                                <segue destination="GKn-TT-ggG" kind="unwind" unwindAction="unwindPasosWithUnwindSegue:" id="rsY-Z0-CxU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="bnt-R8-Wk7"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgPasos" destination="smR-Zm-dEb" id="n7X-PI-ENc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TY8-VF-nzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GKn-TT-ggG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="-160.56971514242881"/>
         </scene>
     </scenes>
 </document>
