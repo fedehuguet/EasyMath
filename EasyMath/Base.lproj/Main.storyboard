@@ -374,6 +374,9 @@
                         <outlet property="exp1" destination="xje-jI-a0G" id="0LT-Yr-IPM"/>
                         <outlet property="exp2" destination="TJY-6S-132" id="WZm-VD-gE5"/>
                         <outlet property="exp3" destination="P8Q-Ms-ly1" id="rCw-MF-hm1"/>
+                        <outlet property="mas1" destination="KoL-sM-w9w" id="cOR-G4-rnn"/>
+                        <outlet property="mas2" destination="Bf0-zU-w4d" id="naH-Sz-Ych"/>
+                        <outlet property="mas3" destination="6CB-QU-7ug" id="b6M-Jn-dvr"/>
                         <outlet property="ucoef1" destination="e9T-S8-ugq" id="5gE-dN-SND"/>
                         <outlet property="ucoef2" destination="Qe8-g2-viv" id="rHB-44-xaB"/>
                         <outlet property="ucoef3" destination="Afn-P7-3AJ" id="e5V-eK-OeU"/>
@@ -381,6 +384,9 @@
                         <outlet property="uexp1" destination="tJL-YO-z7C" id="huv-aY-6ID"/>
                         <outlet property="uexp2" destination="ZsL-qJ-IpF" id="ua8-Sa-3Cn"/>
                         <outlet property="uexp3" destination="R1v-9T-8fJ" id="XJo-WZ-gMm"/>
+                        <outlet property="x1" destination="oaf-ew-dhP" id="YxO-Z0-6mD"/>
+                        <outlet property="x2" destination="B4f-LG-vyM" id="brj-sI-N1L"/>
+                        <outlet property="x3" destination="muk-0X-eGw" id="81v-hb-IKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3a-GI-y4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
