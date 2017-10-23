@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewControllerRevisar: UIViewController {
-    var winEffect: AVAudioPlayer?
+    var player: AVAudioPlayer?
     //Original
     @IBOutlet weak var coef1: UILabel!
     @IBOutlet weak var exp1: UILabel!
@@ -40,8 +40,7 @@ class ViewControllerRevisar: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        generateRand(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +68,12 @@ class ViewControllerRevisar: UIViewController {
             Int(exp1.text!)!-1 == Int(uexp1.text!)! && Int(exp2.text!)!-1 == Int(uexp2.text!)! &&
             Int(exp3.text!)!-1 == Int(uexp3.text!)! && (ucoef4.text!)=="0"
             ){
+            print("entro")
             playSound()
+//            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+            print("salio")
         }
         else {
             ccoef1.text = String(c1)
@@ -79,6 +83,9 @@ class ViewControllerRevisar: UIViewController {
             cexp2.text = String(Int(exp2.text!)!-1)
             cexp3.text = String(Int(exp3.text!)!-1)
             ccoef4.text = "0"
+//            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
             showVals()
         }
     }
@@ -108,27 +115,20 @@ class ViewControllerRevisar: UIViewController {
         cexp3.isHidden = false
         ccoef4.isHidden = false
     }
-    
+
     func playSound() {
         guard let url = Bundle.main.url(forResource: "winSound", withExtension: "mp3") else { return }
-
+        
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
 
-
-
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-            winEffect = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-
-            //iOS 10 and earlier require the following line:
-             //winEffect = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
-
-            //guard let winEffect = winEffect else { return }
-            winEffect?.prepareToPlay()
-
-            winEffect?.play()
-
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
         } catch let error {
             print(error.localizedDescription)
         }

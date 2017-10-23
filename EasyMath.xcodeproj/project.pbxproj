@@ -15,6 +15,7 @@
 		9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F51F9913E500B1B795 /* Main.storyboard */; };
 		9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F81F9913E500B1B795 /* Assets.xcassets */; };
 		9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */; };
+		94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E439F31F9D9BC300E794BA /* winSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9490B9F81F9913E500B1B795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9490B9FB1F9913E500B1B795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9490B9FD1F9913E500B1B795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E439F31F9D9BC300E794BA /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winSound.mp3; path = ../../../../../Downloads/winSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9490B9F81F9913E500B1B795 /* Assets.xcassets */,
 				9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */,
 				9490B9FD1F9913E500B1B795 /* Info.plist */,
+				94E439F31F9D9BC300E794BA /* winSound.mp3 */,
 			);
 			path = EasyMath;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */,
 				9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */,
 				9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */,
 				9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */,
