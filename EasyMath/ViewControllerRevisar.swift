@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewControllerRevisar: UIViewController {
+    var winEffect: AVAudioPlayer?
     //Original
     @IBOutlet weak var coef1: UILabel!
     @IBOutlet weak var exp1: UILabel!
@@ -67,7 +69,7 @@ class ViewControllerRevisar: UIViewController {
             Int(exp1.text!)!-1 == Int(uexp1.text!)! && Int(exp2.text!)!-1 == Int(uexp2.text!)! &&
             Int(exp3.text!)!-1 == Int(uexp3.text!)! && (ucoef4.text!)=="0"
             ){
-        
+            playSound()
         }
         else {
             ccoef1.text = String(c1)
@@ -107,14 +109,29 @@ class ViewControllerRevisar: UIViewController {
         ccoef4.isHidden = false
     }
     
-    /*
-    // MARK: - Navigation
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "winSound", withExtension: "mp3") else { return }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            winEffect = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            //iOS 10 and earlier require the following line:
+             //winEffect = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+
+            //guard let winEffect = winEffect else { return }
+            winEffect?.prepareToPlay()
+
+            winEffect?.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-    */
 
 }
