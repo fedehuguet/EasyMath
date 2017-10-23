@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         let imgPasosSegunda: UIImage
         let imgPasosTercera: UIImage
     }
+    @IBOutlet weak var tabDerivadas: UITabBarItem!
     //por mientras son 2 luego random
     var intProblema = 0;
     var imagePasos : UIImage!
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imagenSolucion: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         segDerivada.setTitle("Tercera", forSegmentAt: 2)
         
         imageList.append(Problemas(strID: "Poli", imgProblema: #imageLiteral(resourceName: "Problema2"), arrSolPrimera: #imageLiteral(resourceName: "Sol2x+5"), arrSolSegunda: #imageLiteral(resourceName: "Sol2x+10"), arrSolTercera: #imageLiteral(resourceName: "Solucion10"), imgPasosPrimera: #imageLiteral(resourceName: "Pasos2x+5"), imgPasosSegunda: #imageLiteral(resourceName: "Pasos2x+10"), imgPasosTercera: #imageLiteral(resourceName: "Pasos10")))
