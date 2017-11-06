@@ -43,26 +43,16 @@ class ViewControllerRevisar: UIViewController {
     @IBOutlet weak var mas2: UILabel!
     @IBOutlet weak var x3: UILabel!
     @IBOutlet weak var mas3: UILabel!
-    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRand(true)
-        self.view.backgroundColor = UIColor.orange
         
-        // 2
-        gradientLayer.frame = self.view.bounds
+        let gradient = CAGradientLayer()
         
-        // 3
-        let color2 = UIColor.clear.cgColor as CGColor
-        let color3 = UIColor.red
-        gradientLayer.colors = [color2, color3]
-        
-        // 4
-        gradientLayer.locations = [0.25, 1]
-        
-        // 5
-        self.view.layer.addSublayer(gradientLayer)
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.red.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
 
     override func didReceiveMemoryWarning() {
