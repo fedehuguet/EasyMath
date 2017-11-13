@@ -16,6 +16,8 @@
 		9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F51F9913E500B1B795 /* Main.storyboard */; };
 		9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F81F9913E500B1B795 /* Assets.xcassets */; };
 		9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */; };
+		94B292221FBA1E1400A47DFC /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B292211FBA1E1400A47DFC /* Property List.plist */; };
+		94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292231FBA1F6000A47DFC /* TableViewCell.swift */; };
 		94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E439F31F9D9BC300E794BA /* winSound.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		9490B9F81F9913E500B1B795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9490B9FB1F9913E500B1B795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9490B9FD1F9913E500B1B795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B292211FBA1E1400A47DFC /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		94B292231FBA1F6000A47DFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		94E439F31F9D9BC300E794BA /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winSound.mp3; path = ../../../../../Downloads/winSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +75,8 @@
 				94270E9F1FB0DC70006074F5 /* TabBarController.swift */,
 				6D0636081F9D693300D16DF5 /* ViewControllerPasos.swift */,
 				6DA2BC101F9BDA940069F24D /* TableViewController.swift */,
+				94B292231FBA1F6000A47DFC /* TableViewCell.swift */,
+				94B292211FBA1E1400A47DFC /* Property List.plist */,
 				9490B9F81F9913E500B1B795 /* Assets.xcassets */,
 				9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */,
 				9490B9FD1F9913E500B1B795 /* Info.plist */,
@@ -141,6 +147,7 @@
 				94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */,
 				9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */,
 				9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */,
+				94B292221FBA1E1400A47DFC /* Property List.plist in Resources */,
 				9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +164,7 @@
 				6DA2BC111F9BDA940069F24D /* TableViewController.swift in Sources */,
 				94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */,
 				6D0636091F9D693300D16DF5 /* ViewControllerPasos.swift in Sources */,
+				94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */,
 				9490B9F21F9913E500B1B795 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

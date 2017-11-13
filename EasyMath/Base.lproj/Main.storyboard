@@ -402,7 +402,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="175" id="pZ4-CO-xuH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="175" id="pZ4-CO-xuH" customClass="TableViewCell" customModule="EasyMath" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pZ4-CO-xuH" id="ETz-3B-Kk2">
@@ -430,6 +430,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgGraph" destination="8xS-Bn-rJm" id="vhW-SY-73i"/>
+                                    <outlet property="lbLevel" destination="WLW-aO-DVm" id="zxd-4U-nvh"/>
+                                    <outlet property="lbTitle" destination="LgM-b8-IWq" id="Xf7-Sl-AZk"/>
                                     <segue destination="Gii-vI-krA" kind="show" id="wXC-wD-yuN"/>
                                 </connections>
                             </tableViewCell>
