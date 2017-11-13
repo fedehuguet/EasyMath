@@ -4,17 +4,25 @@
 <array>
 	<dict>
 		<key>header</key>
-		<string>Funcion Polinomial</string>
+		<string>Polinomial</string>
 		<key>level</key>
 		<string>Nivel 1</string>
+		<key>graph</key>
+		<string>poly1</string>
+	</dict>
+	<dict>
+		<key>header</key>
+		<string>Polinomial</string>
+		<key>level</key>
+		<string>Nivel 2</string>
 		<key>graph</key>
 		<string>poly</string>
 	</dict>
 	<dict>
 		<key>header</key>
-		<string>Funcion Trigonometrica</string>
+		<string>Trigonometrica</string>
 		<key>level</key>
-		<string>Nivel 2</string>
+		<string>Nivel 1</string>
 		<key>graph</key>
 		<string>trigo</string>
 	</dict>
