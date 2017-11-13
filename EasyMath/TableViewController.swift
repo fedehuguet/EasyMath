@@ -10,12 +10,14 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var arrContent : NSArray!
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundImage = UIImage(named: "back")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
-        //tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
+        let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        arrContent = NSArray(contentsOfFile: path!)
         
     }
 
@@ -44,11 +46,55 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return arrContent.count
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "polynivel1")
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        else if indexPath.row == 1 {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "polynivel2")
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "trigonivel1")
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.backgroundColor = UIColor(white: 1, alpha: 0.7)
-        return cell
+        if indexPath.row == 0 {
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell1", for: indexPath) as! TableViewCell
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.layer.borderWidth = 2.0
+            tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
+            let content = (arrContent[indexPath.row] as! NSDictionary)
+            tableViewCell.lbTitle.text = content["header"] as? String
+            tableViewCell.lbLevel.text = content["level"] as? String
+            tableViewCell.imgGraph.image = UIImage(named: (content["graph"] as? String)!)
+            return tableViewCell
+        }
+        else if indexPath.row == 1 {
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell2", for: indexPath) as! TableViewCell
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.layer.borderWidth = 2.0
+            tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
+            let content = (arrContent[indexPath.row] as! NSDictionary)
+            tableViewCell.lbTitle.text = content["header"] as? String
+            tableViewCell.lbLevel.text = content["level"] as? String
+            tableViewCell.imgGraph.image = UIImage(named: (content["graph"] as? String)!)
+            return tableViewCell
+        }
+        else {
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell3", for: indexPath) as! TableViewCell
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.layer.borderWidth = 2.0
+            tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
+            let content = (arrContent[indexPath.row] as! NSDictionary)
+            tableViewCell.lbTitle.text = content["header"] as? String
+            tableViewCell.lbLevel.text = content["level"] as? String
+            tableViewCell.imgGraph.image = UIImage(named: (content["graph"] as? String)!)
+            return tableViewCell
+        }
     }
 }
