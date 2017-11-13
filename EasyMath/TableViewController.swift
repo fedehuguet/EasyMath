@@ -46,11 +46,13 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arrContent.count
+        return 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TableViewCell
         tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+        tableViewCell.layer.borderWidth = 2.0
+        tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
 //        let content = (arrContent[indexPath.row] as! NSDictionary)
 //        tableViewCell.lbTitle.text = content["header"] as? String
 //        tableViewCell.lbLevel.text = content["level"] as? String
