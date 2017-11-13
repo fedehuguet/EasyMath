@@ -12,12 +12,11 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let backgroundImage = UIImage(named: "back")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        //tableView.backgroundView = UIImageView(image: UIImage(named: "back"))
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,5 +29,19 @@ class TableViewController: UITableViewController {
         let vistaInicial  = segue.destination as! ViewController
         vistaInicial.strLbl = strLbl*/
         
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        return cell
     }
 }
