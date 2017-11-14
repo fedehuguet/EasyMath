@@ -65,7 +65,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell1", for: indexPath) as! TableViewCell
-            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.8)
             tableViewCell.layer.borderWidth = 2.0
             tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
             let content = (arrContent[indexPath.row] as! NSDictionary)
@@ -76,7 +76,7 @@ class TableViewController: UITableViewController {
         }
         else if indexPath.row == 1 {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell2", for: indexPath) as! TableViewCell
-            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.8)
             tableViewCell.layer.borderWidth = 2.0
             tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
             let content = (arrContent[indexPath.row] as! NSDictionary)
@@ -87,7 +87,7 @@ class TableViewController: UITableViewController {
         }
         else {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell3", for: indexPath) as! TableViewCell
-            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.8)
             tableViewCell.layer.borderWidth = 2.0
             tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
             let content = (arrContent[indexPath.row] as! NSDictionary)

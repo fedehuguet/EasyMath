@@ -47,12 +47,6 @@ class ViewControllerRevisar: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRand(true)
-        
-        let gradient = CAGradientLayer()
-        
-        gradient.frame = view.bounds
-        gradient.colors = [UIColor.red.cgColor]
-        self.view.layer.insertSublayer(gradient, at: 0)
     }
 
     override func didReceiveMemoryWarning() {
