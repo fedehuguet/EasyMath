@@ -90,6 +90,8 @@ class ViewControllerCalculadora: UIViewController {
     
     
     @IBAction func calcularValor(_ sender: UIButton) {
+        //Alert si estan vacios
+        
         if(bCuadrada)
         {
             let numX = Int(txtX.text!)
