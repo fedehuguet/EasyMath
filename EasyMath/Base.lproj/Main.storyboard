@@ -491,9 +491,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-ia-h38">
-                                <rect key="frame" x="123" y="63" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-ia-h38">
+                                <rect key="frame" x="122" y="40" width="131" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="¿Como jugar?"/>
                                 <connections>
@@ -512,6 +511,8 @@
                             <constraint firstItem="7BG-Jq-dlA" firstAttribute="top" secondItem="r1B-Ky-q6F" secondAttribute="bottom" constant="0.5" id="HD4-vv-TLT"/>
                             <constraint firstItem="u6g-Zo-1qn" firstAttribute="trailing" secondItem="koM-6X-ecV" secondAttribute="trailing" constant="60" id="NQa-uZ-19z"/>
                             <constraint firstItem="u6g-Zo-1qn" firstAttribute="trailing" secondItem="xd2-mi-nlR" secondAttribute="trailing" constant="5" id="Ov3-m7-yey"/>
+                            <constraint firstItem="u6g-Zo-1qn" firstAttribute="trailing" secondItem="J7T-ia-h38" secondAttribute="trailing" constant="122" id="PBh-mH-ZQF"/>
+                            <constraint firstItem="J7T-ia-h38" firstAttribute="top" secondItem="u6g-Zo-1qn" secondAttribute="top" constant="20" id="QeC-AG-B3h"/>
                             <constraint firstItem="r1B-Ky-q6F" firstAttribute="top" secondItem="u6g-Zo-1qn" secondAttribute="top" constant="72" id="X7S-c1-g9e"/>
                             <constraint firstItem="u6g-Zo-1qn" firstAttribute="trailing" secondItem="FO8-VY-IA3" secondAttribute="trailing" constant="60" id="cHp-DK-caK"/>
                             <constraint firstItem="fXa-eW-wNb" firstAttribute="top" secondItem="FO8-VY-IA3" secondAttribute="bottom" constant="0.5" id="fFM-Wi-vMB"/>
@@ -520,6 +521,7 @@
                             <constraint firstItem="r1B-Ky-q6F" firstAttribute="leading" secondItem="u6g-Zo-1qn" secondAttribute="leading" constant="60" id="hyH-Sc-1W1"/>
                             <constraint firstItem="FO8-VY-IA3" firstAttribute="leading" secondItem="u6g-Zo-1qn" secondAttribute="leading" constant="60" id="kJc-hI-enB"/>
                             <constraint firstItem="xd2-mi-nlR" firstAttribute="top" secondItem="koM-6X-ecV" secondAttribute="bottom" id="lTP-hY-xt2"/>
+                            <constraint firstItem="J7T-ia-h38" firstAttribute="leading" secondItem="u6g-Zo-1qn" secondAttribute="leading" constant="122" id="otl-85-yOS"/>
                             <constraint firstItem="koM-6X-ecV" firstAttribute="leading" secondItem="u6g-Zo-1qn" secondAttribute="leading" constant="60" id="pAl-rW-CGY"/>
                             <constraint firstItem="7BG-Jq-dlA" firstAttribute="leading" secondItem="u6g-Zo-1qn" secondAttribute="leading" constant="5" id="pU6-A4-ZgV"/>
                             <constraint firstItem="koM-6X-ecV" firstAttribute="top" secondItem="FpC-ZP-S8n" secondAttribute="bottom" constant="60" id="v9g-lQ-R8e"/>
