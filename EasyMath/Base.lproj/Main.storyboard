@@ -50,9 +50,8 @@
                                     <action selector="CalcCos:" destination="xH3-Qj-jkY" eventType="touchUpInside" id="xNI-Cu-Vq4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-Ma-Xok">
-                                <rect key="frame" x="16" y="84" width="341" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-Ma-Xok">
+                                <rect key="frame" x="16" y="61.5" width="341" height="53"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,15 +149,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculadora de Derivadas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb2-Ph-qnB">
-                                <rect key="frame" x="-20" y="17" width="415" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora de Derivadas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb2-Ph-qnB">
+                                <rect key="frame" x="-20" y="17" width="415" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87833553552627563" green="0.87848657369613647" blue="0.87832605838775635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cb2-Ph-qnB" secondAttribute="trailing" constant="-20" id="0rU-8n-92S"/>
+                            <constraint firstItem="Cb2-Ph-qnB" firstAttribute="top" secondItem="TSg-dg-7fy" secondAttribute="top" constant="17" id="Fsg-UY-1lh"/>
+                            <constraint firstItem="7tc-Ma-Xok" firstAttribute="leading" secondItem="S7d-hC-iN7" secondAttribute="leading" constant="16" id="HHT-jc-n0B"/>
+                            <constraint firstItem="Cb2-Ph-qnB" firstAttribute="leading" secondItem="TSg-dg-7fy" secondAttribute="leading" constant="-20" id="Ygz-Lr-9cK"/>
+                            <constraint firstItem="S7d-hC-iN7" firstAttribute="trailing" secondItem="7tc-Ma-Xok" secondAttribute="trailing" constant="18" id="fVP-yf-2ki"/>
+                            <constraint firstItem="7tc-Ma-Xok" firstAttribute="top" secondItem="Cb2-Ph-qnB" secondAttribute="bottom" constant="11" id="sRB-fM-O5e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S7d-hC-iN7"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="qiJ-Uk-kwm"/>
@@ -172,6 +178,7 @@
                         <outlet property="lblPotencia2" destination="Clm-dq-wkR" id="NOW-47-aaw"/>
                         <outlet property="lblPotencia3" destination="saF-kJ-3e7" id="6TA-co-Isa"/>
                         <outlet property="lblRespuesta" destination="7tc-Ma-Xok" id="aIf-Vm-5nV"/>
+                        <outlet property="lblValorX" destination="Kfp-6S-43V" id="vqR-Ig-Sf4"/>
                         <outlet property="txtEcuacionPoli" destination="8tx-rN-Fo5" id="puX-Ac-Xui"/>
                         <outlet property="txtPol1" destination="2ks-So-1EQ" id="GLq-Hb-VQJ"/>
                         <outlet property="txtPol2" destination="Tcf-fw-l7V" id="6NZ-V9-oAf"/>

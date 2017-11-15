@@ -15,6 +15,7 @@ class ViewControllerCalculadora: UIViewController {
     var bCos = false
     var bCuadrada = false
     
+    @IBOutlet weak var lblValorX: UILabel!
     @IBOutlet weak var lblDerivada: UILabel!
     @IBOutlet weak var lblPotencia2: UILabel!
     @IBOutlet weak var lblPotencia3: UILabel!
@@ -47,7 +48,26 @@ class ViewControllerCalculadora: UIViewController {
         btnCoseno.layer.borderWidth = 2.0
         btnCoseno.layer.borderColor = UIColor(white: 2.0, alpha: borderAlpha).cgColor
         
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
+        //Tamaño btn Cuadrada
+        btnCuadrada.frame = CGRect(x: screenWidth/2, y: screenHeight*0.75, width: screenWidth/2, height: screenHeight/5.42)
+        
+        //Tamaño boton Coseno
+        btnCoseno.frame = CGRect(x: 0, y: screenHeight*0.75, width: screenWidth/2, height: screenHeight/5.42)
+        print(screenHeight)
+        
+        //Tamaño boton Seno
+        btnSeno.frame = CGRect(x: 0, y: screenHeight*0.57, width: screenWidth/2, height: screenHeight/5.42)
+        
+        //Tamaño boton Poli
+        btnPoli.frame = CGRect(x: screenWidth/2, y: screenHeight*0.57, width: screenWidth/2, height: screenHeight/5.42)
+        
         btnCalcular.isHidden = true
+        txtX.isHidden = true
+        lblValorX.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -75,6 +95,8 @@ class ViewControllerCalculadora: UIViewController {
         bSeno = true
         bCos = false
         bCuadrada = false
+        txtX.isHidden = false
+        lblValorX.isHidden = false
         
     }
     @IBAction func CalcPoli(_ sender: UIButton) {
@@ -86,6 +108,8 @@ class ViewControllerCalculadora: UIViewController {
         bSeno = false
         bCos = false
         bCuadrada = false
+        txtX.isHidden = false
+        lblValorX.isHidden = false
         
     }
     @IBAction func CalcCuadrada(_ sender: UIButton) {
@@ -99,6 +123,8 @@ class ViewControllerCalculadora: UIViewController {
         bSeno = false
         bCos = false
         bCuadrada = true
+        txtX.isHidden = false
+        lblValorX.isHidden = false
         
     }
 
@@ -112,6 +138,8 @@ class ViewControllerCalculadora: UIViewController {
         bSeno = false
         bCos = true
         bCuadrada = false
+        txtX.isHidden = false
+        lblValorX.isHidden = false
     }
     
     func verificaCalc() -> Bool {
