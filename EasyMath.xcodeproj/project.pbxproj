@@ -11,7 +11,7 @@
 		6DA2BC111F9BDA940069F24D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2BC101F9BDA940069F24D /* TableViewController.swift */; };
 		6DD396131FBA1C65005D5378 /* ViewControllerCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD396121FBA1C65005D5378 /* ViewControllerCalculadora.swift */; };
 		6DD396151FBBF548005D5378 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */; };
-		941BDEF91FBC0B6C00EF6FCE /* ViewControllerTrigoN2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDEF81FBC0B6C00EF6FCE /* ViewControllerTrigoN2.swift */; };
+		941BDEFB1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */; };
 		94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94270E9F1FB0DC70006074F5 /* TabBarController.swift */; };
 		942B39211F9D1CEC0011A206 /* ViewControllerRevisar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */; };
 		9490B9F21F9913E500B1B795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490B9F11F9913E500B1B795 /* AppDelegate.swift */; };
@@ -31,7 +31,7 @@
 		6DA2BC101F9BDA940069F24D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6DD396121FBA1C65005D5378 /* ViewControllerCalculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCalculadora.swift; sourceTree = "<group>"; };
 		6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
-		941BDEF81FBC0B6C00EF6FCE /* ViewControllerTrigoN2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerTrigoN2.swift; path = ../../../../../Desktop/ViewControllerTrigoN2.swift; sourceTree = "<group>"; };
+		941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTrigoN2.swift; sourceTree = "<group>"; };
 		94270E9F1FB0DC70006074F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRevisar.swift; sourceTree = "<group>"; };
 		9490B9EE1F9913E500B1B795 /* EasyMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +78,7 @@
 		9490B9F01F9913E500B1B795 /* EasyMath */ = {
 			isa = PBXGroup;
 			children = (
+				941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */,
 				9490B9F11F9913E500B1B795 /* AppDelegate.swift */,
 				9490B9F31F9913E500B1B795 /* ViewController.swift */,
 				942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */,
@@ -89,7 +90,6 @@
 				94270E9F1FB0DC70006074F5 /* TabBarController.swift */,
 				6D0636081F9D693300D16DF5 /* ViewControllerPasos.swift */,
 				6DA2BC101F9BDA940069F24D /* TableViewController.swift */,
-				941BDEF81FBC0B6C00EF6FCE /* ViewControllerTrigoN2.swift */,
 				94B292231FBA1F6000A47DFC /* TableViewCell.swift */,
 				94B292211FBA1E1400A47DFC /* Property List.plist */,
 				9490B9F81F9913E500B1B795 /* Assets.xcassets */,
@@ -180,7 +180,7 @@
 				6DA2BC111F9BDA940069F24D /* TableViewController.swift in Sources */,
 				94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */,
 				6D0636091F9D693300D16DF5 /* ViewControllerPasos.swift in Sources */,
-				941BDEF91FBC0B6C00EF6FCE /* ViewControllerTrigoN2.swift in Sources */,
+				941BDEFB1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift in Sources */,
 				94B292261FBA338700A47DFC /* ViewControllerTrigoN1.swift in Sources */,
 				94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */,
 				94B292281FBA339500A47DFC /* ViewControllerPolyN1.swift in Sources */,
