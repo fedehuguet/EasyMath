@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ProtocoloConfig {
     
     struct Problemas {
         let strID : String
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let imgPasosSegunda: UIImage
         let imgPasosTercera: UIImage
     }
-    
+    var delegado : ProtocoloConfig!
     var bLog : Bool!
     var bPoli : Bool!
     var bExp : Bool!
@@ -50,12 +50,13 @@ class ViewController: UIViewController {
         }
         btnMostrar.isEnabled = false
         
-        bLog = false
-        bExp = false
-        bTrig = false
-        bPoli = false
+        bLog = true
+        bExp = true
+        bTrig = true
+        bPoli = true
+        self.title = "Ecuaciones"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
         {
             intProblema = 0;
         }
-
+        
         imagenProblema.image = imageList[intProblema].imgProblema
         
         for index in 0...2 {
@@ -105,9 +106,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MostrarPasos(_ sender: Any) {
-
+        
         if(segDerivada.selectedSegmentIndex == 0){
-        imagePasos = imageList[intProblema].imgPasosPrimera
+            imagePasos = imageList[intProblema].imgPasosPrimera
         }
         else if(segDerivada.selectedSegmentIndex == 1){
             imagePasos = imageList[intProblema].imgPasosSegunda
@@ -121,7 +122,7 @@ class ViewController: UIViewController {
     @IBAction func unwindPasos (unwindSegue: UIStoryboardSegue) {
         
     }
-        
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Pasos" {
             let viewDes = segue.destination as! ViewControllerPasos
@@ -133,9 +134,16 @@ class ViewController: UIViewController {
             viewCon.bLog = self.bLog
             viewCon.bTrig = self.bTrig
             viewCon.bExp = self.bExp
+            viewCon.delegado = self
         }
     }
     
-
+    func setConfig(b1:Bool,b2:Bool,b3:Bool,b4:Bool) {
+        bPoli = b1
+        bLog = b2
+        bTrig = b3
+        bExp = b4
+    }
+    
+    
 }
-
