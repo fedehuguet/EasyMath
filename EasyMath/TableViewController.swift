@@ -61,8 +61,12 @@ class TableViewController: UITableViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "trigonivel1")
             self.navigationController?.pushViewController(vc!, animated: true)
         }
-        else {
+        else if indexPath.row == 3 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "trigonivel2")
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+        else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "eje3")
             self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
@@ -100,8 +104,19 @@ class TableViewController: UITableViewController {
             tableViewCell.imgGraph.image = UIImage(named: (content["graph"] as? String)!)
             return tableViewCell
         }
-        else {
+        else if indexPath.row == 3 {
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell4", for: indexPath) as! TableViewCell
+            tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.8)
+            tableViewCell.layer.borderWidth = 2.0
+            tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor
+            let content = (arrContent[indexPath.row] as! NSDictionary)
+            tableViewCell.lbTitle.text = content["header"] as? String
+            tableViewCell.lbLevel.text = content["level"] as? String
+            tableViewCell.imgGraph.image = UIImage(named: (content["graph"] as? String)!)
+            return tableViewCell
+        }
+        else {
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "idCell5", for: indexPath) as! TableViewCell
             tableViewCell.backgroundColor = UIColor(white: 1, alpha: 0.8)
             tableViewCell.layer.borderWidth = 2.0
             tableViewCell.layer.borderColor = UIColor(white: 1, alpha: 0.9).cgColor

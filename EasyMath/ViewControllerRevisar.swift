@@ -151,5 +151,10 @@ class ViewControllerRevisar: UIViewController {
             print(error.localizedDescription)
         }
     }
-
+    @IBAction func presentInfo(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "info") as! ViewControllerInfo
+        vc.backgroundIm = #imageLiteral(resourceName: "polyejen2")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
