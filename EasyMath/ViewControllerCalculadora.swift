@@ -179,11 +179,11 @@ class ViewControllerCalculadora: UIViewController {
                 let intValor = cos(Double(txtPol3.text!)! * Double(txtX.text!)!) * Double(txtPol3.text!)!
                 lblRespuesta.text = String(intValor)
                 var strValor : String
-                if(txtX.text == "1"){
+                if(txtPol3.text == "1"){
                     strValor = ""
                 }
                 else {
-                    strValor = txtX.text!
+                    strValor = txtPol3.text!
                 }
                 lblDerivada.text = "Derivada:   "+strValor+"cos("+strValor+"x)"
             }
@@ -193,16 +193,21 @@ class ViewControllerCalculadora: UIViewController {
                 let intValor = sin(Double(txtPol3.text!)! * Double(txtX.text!)!) * Double(txtPol3.text!)!
                 lblRespuesta.text = String(intValor * -1)
                 var strValor : String
-                if(txtX.text == "1"){
+                let strX : String
+                
+                if(txtPol3.text == "1"){
                     strValor = "-"
+                    strX = ""
                 }
-                else if(Int(txtX.text!)! < 0){
-                    strValor = txtX.text!
+                else if(Int(txtPol3.text!)! < 0){
+                    strValor = txtPol3.text!
+                    strX = txtPol3.text!
                 }
                 else{
-                    strValor = "-"+txtX.text!
+                    strValor = "-"+txtPol3.text!
+                    strX = txtPol3.text!
                 }
-                //lblDerivada.text = "Derivada:   "+strValor+"sen("+txtX.text+"x)"
+                lblDerivada.text = "Derivada:   "+strValor+"sen("+strX+"x)"
                 
             }
         }
