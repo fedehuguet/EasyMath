@@ -20,6 +20,7 @@
 		9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F81F9913E500B1B795 /* Assets.xcassets */; };
 		9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */; };
 		94A767771FBCB72C00069E05 /* ViewControllerEje3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A767761FBCB72C00069E05 /* ViewControllerEje3.swift */; };
+		94A767791FBCBD1A00069E05 /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A767781FBCBD1A00069E05 /* ViewControllerInfo.swift */; };
 		94B292221FBA1E1400A47DFC /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B292211FBA1E1400A47DFC /* Property List.plist */; };
 		94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292231FBA1F6000A47DFC /* TableViewCell.swift */; };
 		94B292261FBA338700A47DFC /* ViewControllerTrigoN1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292251FBA338700A47DFC /* ViewControllerTrigoN1.swift */; };
@@ -43,6 +44,7 @@
 		9490B9FB1F9913E500B1B795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9490B9FD1F9913E500B1B795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A767761FBCB72C00069E05 /* ViewControllerEje3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEje3.swift; sourceTree = "<group>"; };
+		94A767781FBCBD1A00069E05 /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
 		94B292211FBA1E1400A47DFC /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		94B292231FBA1F6000A47DFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		94B292251FBA338700A47DFC /* ViewControllerTrigoN1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTrigoN1.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				9490B9F31F9913E500B1B795 /* ViewController.swift */,
 				942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */,
 				9490B9F51F9913E500B1B795 /* Main.storyboard */,
+				94A767781FBCBD1A00069E05 /* ViewControllerInfo.swift */,
 				94A767761FBCB72C00069E05 /* ViewControllerEje3.swift */,
 				6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */,
 				94B292251FBA338700A47DFC /* ViewControllerTrigoN1.swift */,
@@ -185,6 +188,7 @@
 				6D0636091F9D693300D16DF5 /* ViewControllerPasos.swift in Sources */,
 				941BDEFB1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift in Sources */,
 				94B292261FBA338700A47DFC /* ViewControllerTrigoN1.swift in Sources */,
+				94A767791FBCBD1A00069E05 /* ViewControllerInfo.swift in Sources */,
 				94A767771FBCB72C00069E05 /* ViewControllerEje3.swift in Sources */,
 				94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */,
 				94B292281FBA339500A47DFC /* ViewControllerPolyN1.swift in Sources */,

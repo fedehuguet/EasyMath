@@ -491,6 +491,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-ia-h38">
+                                <rect key="frame" x="123" y="63" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="¿Como jugar?"/>
+                                <connections>
+                                    <action selector="presentInfo:" destination="Gii-vI-krA" eventType="touchUpInside" id="Zjg-e2-oFo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87835413217544556" green="0.87848073244094849" blue="0.87832647562026978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -553,6 +562,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3a-GI-y4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1645.5999999999999" y="549.17541229385313"/>
+        </scene>
+        <!--View Controller Info-->
+        <scene sceneID="UDR-p1-vZ4">
+            <objects>
+                <viewController storyboardIdentifier="info" id="l8y-on-cSO" customClass="ViewControllerInfo" customModule="EasyMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNt-12-CMN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="JM8-L8-hAq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enh-Ay-iF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="1250"/>
         </scene>
         <!--View Controller PolyN1-->
         <scene sceneID="5sB-PJ-Bum">
