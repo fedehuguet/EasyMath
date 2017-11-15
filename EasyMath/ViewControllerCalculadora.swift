@@ -15,6 +15,7 @@ class ViewControllerCalculadora: UIViewController {
     var bCos = false
     var bCuadrada = false
     
+    @IBOutlet weak var lblDerivada: UILabel!
     @IBOutlet weak var lblPotencia2: UILabel!
     @IBOutlet weak var lblPotencia3: UILabel!
     @IBOutlet weak var txtEcuacionPoli: UILabel!
@@ -45,6 +46,8 @@ class ViewControllerCalculadora: UIViewController {
         
         btnCoseno.layer.borderWidth = 2.0
         btnCoseno.layer.borderColor = UIColor(white: 2.0, alpha: borderAlpha).cgColor
+        
+        btnCalcular.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -52,24 +55,32 @@ class ViewControllerCalculadora: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func borrarDatos() {
+        txtPol1.text = ""
+        txtPol2.text = ""
+        txtPol3.text = ""
+        txtPol4.text = ""
+        txtX.text = ""
+        lblRespuesta.text = "0"
+        lblDerivada.text = ""
+        
+        txtEcuacionPoli.frame.origin = CGPoint(x: 16, y: 216)
+    }
     @IBAction func CalcSeno(_ sender: UIButton) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        label.center = CGPoint(x: 160, y: 285)
-        label.textAlignment = .center
-        label.text = "x"
-        self.view.addSubview(label)
+        borrarDatos()
+        btnCalcular.isHidden = false
+        modificaEcuacion(strLbl: "        sin (        x)", bHide: true)
+        txtPol3.isHidden = false
+        bPoli = false
+        bSeno = true
+        bCos = false
+        bCuadrada = false
+        
     }
     @IBAction func CalcPoli(_ sender: UIButton) {
-        /*let a = Double(txtPol1.text!)
-        let b = Double(txtPol2.text!)
-        let c = Double(txtPol3.text!)
-        let d = Double(txtPol4.text!)
-        let f4 = makeThirdOrderPolynomial(A: a!, B: b!, C: c!, D: d!)
-        let d4 = Int(derivativeOf(fn: f4, atX: Double(txtX.text!)!))
-        lblRespuesta.text = String(d4)*/
+        borrarDatos()
+        btnCalcular.isHidden = false
         modificaEcuacion(strLbl: "x  +       x  +       x  +", bHide: false)
-        txtEcuacionPoli.frame.origin = CGPoint(x: 16, y: 216)
         
         bPoli = true
         bSeno = false
@@ -78,6 +89,8 @@ class ViewControllerCalculadora: UIViewController {
         
     }
     @IBAction func CalcCuadrada(_ sender: UIButton) {
+        borrarDatos()
+        btnCalcular.isHidden = false
         modificaEcuacion(strLbl: "x", bHide: true)
         txtPol2.isHidden = false
         lblPotencia2.isHidden = false
@@ -86,30 +99,119 @@ class ViewControllerCalculadora: UIViewController {
         bSeno = false
         bCos = false
         bCuadrada = true
+        
+    }
+
+    @IBAction func CalcCos(_ sender: Any) {
+        borrarDatos()
+        btnCalcular.isHidden = false
+        modificaEcuacion(strLbl: "        cos (        x)", bHide: true)
+        txtPol3.isHidden = false
+        
+        bPoli = false
+        bSeno = false
+        bCos = true
+        bCuadrada = false
     }
     
-    
-    @IBAction func calcularValor(_ sender: UIButton) {
-        //Alert si estan vacios
+    func verificaCalc() -> Bool {
+        let intTf1 = Int(txtPol1.text!)
+        let intTf2 = Int(txtPol2.text!)
+        let intTf3 = Int(txtPol3.text!)
+        let intTf4 = Int(txtPol4.text!)
+        let intTfX = Int(txtX.text!)
         
         if(bCuadrada)
         {
-            let numX = Int(txtX.text!)
-            /*derivativeOf(fn: x_squared, atX: numX!)
-            let intDer = Int(derivativeOf(fn: x_squared, atX: numX!))
-            */
-            let intDer = Int(txtPol2.text!)! * 2 * numX!
-            lblRespuesta.text = String(intDer)
+            if intTf2 == nil || intTfX == nil {
+                return false
+            }
         }
         else if(bPoli)
         {
-            let a = Double(txtPol1.text!)
-            let b = Double(txtPol2.text!)
-            let c = Double(txtPol3.text!)
-            let d = Double(txtPol4.text!)
-            let f4 = makeThirdOrderPolynomial(A: a!, B: b!, C: c!, D: d!)
-            let d4 = Int(derivativeOf(fn: f4, atX: Double(txtX.text!)!))
-            lblRespuesta.text = String(d4)
+            if intTf1 == nil || intTf2 == nil || intTf3 == nil || intTf4 == nil || intTfX == nil {
+                return false
+            }
+        }
+        else if (bSeno)
+        {
+            if intTf3 == nil || intTfX == nil {
+                return false
+            }
+        }
+        else
+        {
+            //Coseno
+            if intTf3 == nil || intTfX == nil {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    @IBAction func calcularValor(_ sender: UIButton) {
+        //Alert si estan vacios
+        if verificaCalc() {
+            if(bCuadrada)
+            {
+                let numX = Int(txtX.text!)
+                let intDer = Int(txtPol2.text!)! * 2 * numX!
+                lblRespuesta.text = String(intDer)
+                lblDerivada.text = "Derivada: "+String(Int(txtPol2.text!)!*2)+"x"
+            }
+            else if(bPoli)
+            {
+                let a = Double(txtPol1.text!)
+                let b = Double(txtPol2.text!)
+                let c = Double(txtPol3.text!)
+                let d = Double(txtPol4.text!)
+                let f4 = makeThirdOrderPolynomial(A: a!, B: b!, C: c!, D: d!)
+                let d4 = Int(derivativeOf(fn: f4, atX: Double(txtX.text!)!))
+                lblRespuesta.text = String(d4)
+                let str1 = String(Int(txtPol1.text!)!*3)
+                let str2 = String(Int(txtPol2.text!)!*2)
+                lblDerivada.text = "Derivada:   "+str1+" x^(2)  +  "+str2+"x  +  "+txtPol3.text!
+                
+            }
+            else if (bSeno)
+            {
+                let intValor = cos(Double(txtPol3.text!)! * Double(txtX.text!)!) * Double(txtPol3.text!)!
+                lblRespuesta.text = String(intValor)
+                var strValor : String
+                if(txtX.text == "1"){
+                    strValor = ""
+                }
+                else {
+                    strValor = txtX.text!
+                }
+                lblDerivada.text = "Derivada:   "+strValor+"cos("+strValor+"x)"
+            }
+            else
+            {
+                //Coseno
+                let intValor = sin(Double(txtPol3.text!)! * Double(txtX.text!)!) * Double(txtPol3.text!)!
+                lblRespuesta.text = String(intValor * -1)
+                var strValor : String
+                if(txtX.text == "1"){
+                    strValor = "-"
+                }
+                else if(Int(txtX.text!)! < 0){
+                    strValor = txtX.text!
+                }
+                else{
+                    strValor = "-"+txtX.text!
+                }
+                lblDerivada.text = "Derivada:   "+strValor+"sen("+txtX.text+"x)"
+                
+            }
+        }
+        else {
+            let alertaNaN = UIAlertController(title: "Error", message: "Debes llenar todos los espacios con numeros", preferredStyle: .alert)
+            
+            alertaNaN.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            
+            present(alertaNaN,animated: true, completion: nil)
         }
     }
     
