@@ -202,7 +202,7 @@ class ViewControllerCalculadora: UIViewController {
                 else{
                     strValor = "-"+txtX.text!
                 }
-                lblDerivada.text = "Derivada:   "+strValor+"sen("+txtX.text+"x)"
+                //lblDerivada.text = "Derivada:   "+strValor+"sen("+txtX.text+"x)"
                 
             }
         }
