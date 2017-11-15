@@ -26,5 +26,13 @@
 		<key>graph</key>
 		<string>trigo</string>
 	</dict>
+	<dict>
+		<key>header</key>
+		<string>Trigonometrica</string>
+		<key>level</key>
+		<string>Nivel 2</string>
+		<key>graph</key>
+		<string>poly</string>
+	</dict>
 </array>
 </plist>
