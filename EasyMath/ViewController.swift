@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         let imgPasosSegunda: UIImage
         let imgPasosTercera: UIImage
     }
+    
+    var bLog : Bool!
+    var bPoli : Bool!
+    var bExp : Bool!
+    var bTrig : Bool!
+    
     @IBOutlet weak var tabDerivadas: UITabBarItem!
     //por mientras son 2 luego random
     var intProblema = 0;
@@ -33,17 +39,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         segDerivada.setTitle("Tercera", forSegmentAt: 2)
         
         imageList.append(Problemas(strID: "Poli", imgProblema: #imageLiteral(resourceName: "Problema2"), arrSolPrimera: #imageLiteral(resourceName: "Sol2x+5"), arrSolSegunda: #imageLiteral(resourceName: "Sol2x+10"), arrSolTercera: #imageLiteral(resourceName: "Solucion10"), imgPasosPrimera: #imageLiteral(resourceName: "Pasos2x+5"), imgPasosSegunda: #imageLiteral(resourceName: "Pasos2x+10"), imgPasosTercera: #imageLiteral(resourceName: "Pasos10")))
         
-        imageList.append(Problemas(strID: "trigonometrica", imgProblema: #imageLiteral(resourceName: "imgSinX2"), arrSolPrimera: #imageLiteral(resourceName: "SenSol1"), arrSolSegunda: #imageLiteral(resourceName: "SenSol2"), arrSolTercera: #imageLiteral(resourceName: "SenSol3"), imgPasosPrimera: #imageLiteral(resourceName: "Pasos1"), imgPasosSegunda: #imageLiteral(resourceName: "Pasos2"), imgPasosTercera: #imageLiteral(resourceName: "Pasos3")))
+        imageList.append(Problemas(strID: "Trig", imgProblema: #imageLiteral(resourceName: "imgSinX2"), arrSolPrimera: #imageLiteral(resourceName: "SenSol1"), arrSolSegunda: #imageLiteral(resourceName: "SenSol2"), arrSolTercera: #imageLiteral(resourceName: "SenSol3"), imgPasosPrimera: #imageLiteral(resourceName: "Pasos1"), imgPasosSegunda: #imageLiteral(resourceName: "Pasos2"), imgPasosTercera: #imageLiteral(resourceName: "Pasos3")))
         
         for index in 0...2 {
             segDerivada.setEnabled(false, forSegmentAt: index)
         }
         btnMostrar.isEnabled = false
+        
+        bLog = false
+        bExp = false
+        bTrig = false
+        bPoli = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,9 +123,17 @@ class ViewController: UIViewController {
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewDes = segue.destination as! ViewControllerPasos
-        
-        viewDes.imagePasos = imagePasos
+        if segue.identifier == "Pasos" {
+            let viewDes = segue.destination as! ViewControllerPasos
+            viewDes.imagePasos = imagePasos
+        }
+        else {
+            let viewCon = segue.destination as! ViewControllerConfig
+            viewCon.bPoli = self.bPoli
+            viewCon.bLog = self.bLog
+            viewCon.bTrig = self.bTrig
+            viewCon.bExp = self.bExp
+        }
     }
     
 
