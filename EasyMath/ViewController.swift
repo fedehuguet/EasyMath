@@ -62,7 +62,7 @@ class ViewController: UIViewController, ProtocoloConfig {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func GenerarEcuacion(_ sender: UIButton) {
-        
+        segDerivada.selectedSegmentIndex = 0
         if(intProblema==0){
             intProblema = 1;
         }
