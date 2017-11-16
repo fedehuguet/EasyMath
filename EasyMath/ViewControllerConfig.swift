@@ -44,6 +44,9 @@ class ViewControllerConfig: UIViewController {
     }
     
     @IBAction func cambiaConfig(_ sender: UISwitch) {
+        if !swPoli.isOn && !swLog.isOn && !swTrig.isOn && !swExp.isOn {
+            swPoli.isOn = true
+        }
         delegado.setConfig(b1: swPoli.isOn, b2: swLog.isOn, b3: swTrig.isOn, b4: swExp.isOn)
     }
     
