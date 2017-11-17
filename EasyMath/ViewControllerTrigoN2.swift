@@ -55,46 +55,61 @@ class ViewControllerTrigoN2: UIViewController {
     }
     
     @IBAction func reviewAns(_ sender: Any) {
-        if equation.text == "sin" {
-            if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "+" && uequat.text == "sinx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "cosx") {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                ccoef1.text = exp.text
-                cexp1.text = String(Int(exp.text!)!-1)
-                cequat1.text = "sin"
-                csign.text = "+"
-                cexp2.text = exp.text
-                cequat2.text = "cos"
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
-            }
+        if ucoef1.text == "" || ux1.text == "" || uexp1.text == "" || uequat.text == "" || usign.text == "" || ux2.text == "" || uexp2.text == "" || uequat2.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Llena completamente los campos", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         else {
-            if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "-" && uequat.text == "cosx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "sinx") {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
+            if equation.text == "sin" {
+                if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "+" && uequat.text == "sinx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "cosx") {
+                    playSound()
+                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    //            self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                        self.ccoef1.text = self.exp.text
+                        self.cexp1.text = String(Int(self.exp.text!)!-1)
+                        self.cequat1.text = "sin"
+                        self.csign.text = "+"
+                        self.cexp2.text = self.exp.text
+                        self.cequat2.text = "cos"
+                        self.showVals()
+                    }))
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                    present(refreshAlert, animated: true, completion: nil)
+                }
             }
             else {
-                ccoef1.text = exp.text
-                cexp1.text = String(Int(exp.text!)!-1)
-                cequat1.text = "cos"
-                csign.text = "-"
-                cexp2.text = exp.text
-                cequat2.text = "sin"
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
+                if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "-" && uequat.text == "cosx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "sinx") {
+                    playSound()
+                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    //            self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                        self.ccoef1.text = self.exp.text
+                        self.cexp1.text = String(Int(self.exp.text!)!-1)
+                        self.cequat1.text = "cos"
+                        self.csign.text = "-"
+                        self.cexp2.text = self.exp.text
+                        self.cequat2.text = "sin"
+                        self.showVals()
+                    }))
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                    present(refreshAlert, animated: true, completion: nil)
+                }
+                
             }
-            
         }
     }
     func resetVals(){

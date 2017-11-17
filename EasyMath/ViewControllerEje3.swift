@@ -40,13 +40,27 @@ class ViewControllerEje3: UIViewController {
     }
     
     @IBAction func reviewAns(_ sender: Any) {
-        if coef.text == ucoef1.text && coef.text == uln.text {
-            playSound()
+        if ucoef1.text == "" || uln.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Llena completamente los campos", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         else {
-            ccoef1.text = coef.text
-            cln.text = "ln (" + coef.text! + " )"
-            showVals()
+            if coef.text == ucoef1.text && coef.text == uln.text {
+                playSound()
+            }
+            else {
+                let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                
+                refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                    self.ccoef1.text = self.coef.text
+                    self.cln.text = "ln (" + self.coef.text! + " )"
+                    self.showVals()
+                }))
+                
+                refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                present(refreshAlert, animated: true, completion: nil)
+            }
         }
     }
     func resetVals(){

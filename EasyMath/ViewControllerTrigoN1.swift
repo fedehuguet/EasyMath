@@ -48,42 +48,57 @@ class ViewControllerTrigoN1: UIViewController {
     }
     
     @IBAction func reviewAns(_ sender: Any) {
-        if equation.text == "sin" {
-            if (usign.text == "+" && ucoefeq.text == coef.text && uequation.text == "cos" && ucoef.text == coef.text) {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                csign.text = "+"
-                ccoefeq.text = coef.text
-                cequation.text = "cos"
-                ccoef.text = coef.text
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
-            }
+        if usign.text == "" || ucoefeq.text == "" || uequation.text == "" || ucoef.text == "" || ux.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Llena completamente los campos", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         else {
-            if (usign.text == "-" && ucoefeq.text == coef.text && uequation.text == "sin" && ucoef.text == coef.text) {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
+            if equation.text == "sin" {
+                if (usign.text == "+" && ucoefeq.text == coef.text && uequation.text == "cos" && ucoef.text == coef.text) {
+                    playSound()
+                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    //            self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                        self.csign.text = "+"
+                        self.ccoefeq.text = self.coef.text
+                        self.cequation.text = "cos"
+                        self.ccoef.text = self.coef.text
+                        self.showVals()
+                    }))
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                    present(refreshAlert, animated: true, completion: nil)
+                }
             }
             else {
-                csign.text = "-"
-                ccoefeq.text = coef.text
-                cequation.text = "sin"
-                ccoef.text = coef.text
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
+                if (usign.text == "-" && ucoefeq.text == coef.text && uequation.text == "sin" && ucoef.text == coef.text) {
+                    playSound()
+                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    //            self.present(alert, animated: true, completion: nil)
+                }
+                else {
+                    let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                        self.csign.text = "-"
+                        self.ccoefeq.text = self.coef.text
+                        self.cequation.text = "sin"
+                        self.ccoef.text = self.coef.text
+                        self.showVals()
+                    }))
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                    present(refreshAlert, animated: true, completion: nil)
+                }
+                
             }
-            
         }
     }
     func resetVals(){

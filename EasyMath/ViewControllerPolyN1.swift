@@ -55,29 +55,40 @@ class ViewControllerPolyN1: UIViewController {
         coef3.text = String(Int(arc4random_uniform(8)+1))
     }
     @IBAction func reviewAns(_ sender: Any) {
-        let c1 = Int(coef1.text!)! * Int(exp1.text!)!
-        let c2 = Int(coef2.text!)! * Int(exp2.text!)!
-        
-        if(String(c1)==(ucoef1.text!) && String(c2)==(ucoef2.text!) &&
-            Int(exp1.text!)!-1 == Int(uexp1.text!)! && Int(exp2.text!)!-1 == Int(uexp2.text!)! && (ucoef3.text!)=="0"
-            ){
-            print("entro")
-            playSound()
-            //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-            //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            //            self.present(alert, animated: true, completion: nil)
-            print("salio")
+        if ucoef1.text == "" || uexp1.text == "" || ucoef2.text == "" || uexp2.text == "" || ucoef3.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Llena completamente los campos", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         else {
-            ccoef1.text = String(c1)
-            ccoef2.text = String(c2)
-            ccoef3.text = "0"
-            cexp1.text = String(Int(exp1.text!)!-1)
-            cexp2.text = String(Int(exp2.text!)!-1)
-            //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-            //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            //            self.present(alert, animated: true, completion: nil)
-            showVals()
+            let c1 = Int(coef1.text!)! * Int(exp1.text!)!
+            let c2 = Int(coef2.text!)! * Int(exp2.text!)!
+            
+            if(String(c1)==(ucoef1.text!) && String(c2)==(ucoef2.text!) &&
+                Int(exp1.text!)!-1 == Int(uexp1.text!)! && Int(exp2.text!)!-1 == Int(uexp2.text!)! && (ucoef3.text!)=="0"
+                ){
+                print("entro")
+                playSound()
+                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
+                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                //            self.present(alert, animated: true, completion: nil)
+                print("salio")
+            }
+            else {
+                let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
+                
+                refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+                    self.ccoef1.text = String(c1)
+                    self.ccoef2.text = String(c2)
+                    self.ccoef3.text = "0"
+                    self.cexp1.text = String(Int(self.exp1.text!)!-1)
+                    self.cexp2.text = String(Int(self.exp2.text!)!-1)
+                    self.showVals()
+                }))
+                
+                refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
+                present(refreshAlert, animated: true, completion: nil)
+            }
         }
     }
     
