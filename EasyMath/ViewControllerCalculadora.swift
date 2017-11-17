@@ -34,6 +34,10 @@ class ViewControllerCalculadora: UIViewController {
     @IBOutlet weak var btnCalcular: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //let tap = UITapGestureRecognizer(target: self, action: Selector(("quitaTeclado")))
+        
+        //view.addGestureRecognizer(tap)
         modificaEcuacion(strLbl: "Escoje una ecuación", bHide: true)
         let borderAlpha : CGFloat = 0.7
         btnSeno.layer.borderWidth = 2.0
@@ -70,7 +74,11 @@ class ViewControllerCalculadora: UIViewController {
         lblValorX.isHidden = true
         // Do any additional setup after loading the view.
     }
-
+    
+    func quitaTeclado() {
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

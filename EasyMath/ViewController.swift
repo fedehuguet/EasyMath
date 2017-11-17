@@ -36,6 +36,8 @@ class ViewController: UIViewController, ProtocoloConfig {
     var lstFiltroEcuaciones = [Problemas]()
     @IBOutlet weak var btnMostrar: UIButton!
     @IBOutlet weak var imagenSolucion: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +51,15 @@ class ViewController: UIViewController, ProtocoloConfig {
         
         agregarLista(id: "Exp", imgPro: #imageLiteral(resourceName: "2ex"), d1: #imageLiteral(resourceName: "R_2ex"), d2: #imageLiteral(resourceName: "R_2ex"), d3: #imageLiteral(resourceName: "R_2ex"), p1: #imageLiteral(resourceName: "P_2ex"), p2: #imageLiteral(resourceName: "P_2ex"), p3: #imageLiteral(resourceName: "P_2ex"))
         
+        agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: "341"), d1: #imageLiteral(resourceName: "R_341"), d2: #imageLiteral(resourceName: "R2_341"), d3: #imageLiteral(resourceName: "R3_341"), p1: #imageLiteral(resourceName: "P_341"), p2: #imageLiteral(resourceName: "P3_341"), p3: #imageLiteral(resourceName: "P3_341"))
+        
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "cos3x2"), d1: #imageLiteral(resourceName: "R_cos3x2"), d2: #imageLiteral(resourceName: "R2_cos3x2"), d3: #imageLiteral(resourceName: "R3_3x2"), p1: #imageLiteral(resourceName: "P_cos3x2"), p2: #imageLiteral(resourceName: "P2_3x2"), p3: #imageLiteral(resourceName: "P3_3x2"))
+        
+        agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: "X_14x+3xyz"), d1: #imageLiteral(resourceName: " R_14x3xyz"), d2: #imageLiteral(resourceName: "R2_14x3xyz"), d3: #imageLiteral(resourceName: "R3_14x3xyz"), p1: #imageLiteral(resourceName: "P_14x3xyz"), p2: #imageLiteral(resourceName: "P2_14x3xyz"), p3: #imageLiteral(resourceName: "P3_14x3xyz"))
+        
+        
+        
+        
         for index in 0...2 {
             segDerivada.setEnabled(false, forSegmentAt: index)
         }
@@ -60,7 +71,7 @@ class ViewController: UIViewController, ProtocoloConfig {
         bPoli = true
         self.title = "Ecuaciones"
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,6 +80,7 @@ class ViewController: UIViewController, ProtocoloConfig {
         
         imageList.append(Problemas(strID: id, imgProblema: imgPro , arrSolPrimera: d1, arrSolSegunda: d2, arrSolTercera: d3, imgPasosPrimera: p1, imgPasosSegunda: p2, imgPasosTercera: p3))
     }
+    
     func filtrarLista() {
         for (index, element) in imageList.enumerated() {
             if bLog && element.strID == "Log" {
@@ -91,7 +103,17 @@ class ViewController: UIViewController, ProtocoloConfig {
         btnMostrar.isEnabled = true
         
         filtrarLista()
-        intProblema = Int(arc4random_uniform(UInt32(lstFiltroEcuaciones.count)))
+        var intRandom = Int(arc4random_uniform(UInt32(lstFiltroEcuaciones.count)))
+        if intRandom == intProblema && intRandom < lstFiltroEcuaciones.count - 1 {
+            intRandom = intRandom + 1
+        }
+        else if intRandom == intProblema && intRandom == lstFiltroEcuaciones.count - 1 {
+            intRandom = intRandom - 1
+        }
+        else {
+            intProblema = intRandom
+        }
+        
         imagenProblema.image = lstFiltroEcuaciones[intProblema].imgProblema
         
         for index in 0...2 {
