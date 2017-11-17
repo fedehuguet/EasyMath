@@ -12,30 +12,16 @@ import AVFoundation
 class ViewControllerEje3: UIViewController {
     var player: AVAudioPlayer?
     var arrEquations: [String] = ["cos", "sin"]
-    @IBOutlet weak var exp: UILabel!
-    @IBOutlet weak var equation: UILabel!
+    @IBOutlet weak var coef: UILabel!
     
     //User
     @IBOutlet weak var ucoef1: UITextField!
-    @IBOutlet weak var ux1: UITextField!
-    @IBOutlet weak var uexp1: UITextField!
-    @IBOutlet weak var uequat: UITextField!
-    @IBOutlet weak var usign: UITextField!
-    @IBOutlet weak var ux2: UITextField!
-    @IBOutlet weak var uexp2: UITextField!
-    @IBOutlet weak var uequat2: UITextField!
+    @IBOutlet weak var uln: UITextField!
     
     //Correct
     @IBOutlet weak var ccoef1: UILabel!
-    @IBOutlet weak var cx1: UILabel!
-    @IBOutlet weak var cexp1: UILabel!
-    @IBOutlet weak var cequat1: UILabel!
-    @IBOutlet weak var cxeq: UILabel!
-    @IBOutlet weak var csign: UILabel!
-    @IBOutlet weak var cx2: UILabel!
-    @IBOutlet weak var cexp2: UILabel!
-    @IBOutlet weak var cequat2: UILabel!
-    @IBOutlet weak var cxequat2: UILabel!
+    @IBOutlet weak var cln: UILabel!
+    @IBOutlet weak var cx: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,84 +36,29 @@ class ViewControllerEje3: UIViewController {
     
     @IBAction func generateRand(_ sender: Any) {
         resetVals()
-        exp.text = String(Int(arc4random_uniform(8)+1))
-        equation.text = arrEquations[Int(arc4random_uniform(2))]
+        coef.text = String(Int(arc4random_uniform(8)+1))
     }
     
     @IBAction func reviewAns(_ sender: Any) {
-        if equation.text == "sin" {
-            if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "+" && uequat.text == "sinx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "cosx") {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                ccoef1.text = exp.text
-                cexp1.text = String(Int(exp.text!)!-1)
-                cequat1.text = "sin"
-                csign.text = "+"
-                cexp2.text = exp.text
-                cequat2.text = "cos"
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
-            }
+        if coef.text == ucoef1.text && coef.text == uln.text {
+            playSound()
         }
         else {
-            if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "-" && uequat.text == "cosx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "sinx") {
-                playSound()
-                //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                ccoef1.text = exp.text
-                cexp1.text = String(Int(exp.text!)!-1)
-                cequat1.text = "cos"
-                csign.text = "-"
-                cexp2.text = exp.text
-                cequat2.text = "sin"
-                //            let alert = UIAlertController(title: "Lo sentimos", message: "Respuesta incorrecta", preferredStyle: UIAlertControllerStyle.alert)
-                //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                //            self.present(alert, animated: true, completion: nil)
-                showVals()
-            }
-            
+            showVals()
         }
     }
     func resetVals(){
         ccoef1.isHidden = true
-        cx1.isHidden = true
-        cexp1.isHidden = true
-        cequat1.isHidden = true
-        cxeq.isHidden = true
-        csign.isHidden = true
-        cx2.isHidden = true
-        cexp2.isHidden = true
-        cequat2.isHidden = true
-        cxequat2.isHidden = true
+        cln.isHidden = true
+        cx.isHidden = true
         ucoef1.text = ""
-        ux1.text = ""
-        uexp1.text = ""
-        uequat.text = ""
-        usign.text = ""
-        ux2.text = ""
-        uexp2.text = ""
-        uequat2.text = ""
+        ucoef1.text = ""
+        uln.text = ""
     }
     func showVals(){
         ccoef1.isHidden = false
-        cx1.isHidden = false
-        cexp1.isHidden = false
-        cequat1.isHidden = false
-        cxeq.isHidden = false
-        csign.isHidden = false
-        cx2.isHidden = false
-        cexp2.isHidden = false
-        cequat2.isHidden = false
-        cxequat2.isHidden = false
+        cln.isHidden = false
+        cx.isHidden = false
     }
     
     func playSound() {
