@@ -32,7 +32,7 @@
 		<key>level</key>
 		<string>Nivel 2</string>
 		<key>graph</key>
-		<string>poly</string>
+		<string>sine_2</string>
 	</dict>
 	<dict>
 		<key>header</key>
@@ -40,7 +40,7 @@
 		<key>level</key>
 		<string>Nivel 1</string>
 		<key>graph</key>
-		<string>poly</string>
+		<string>exponential_g</string>
 	</dict>
 </array>
 </plist>
