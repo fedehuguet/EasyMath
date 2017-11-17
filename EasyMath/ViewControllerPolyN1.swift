@@ -126,5 +126,11 @@ class ViewControllerPolyN1: UIViewController {
             print(error.localizedDescription)
         }
     }
-
+    
+    @IBAction func showInfo(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "info") as! ViewControllerInfo
+        vc.backgroundIm = #imageLiteral(resourceName: "polyejen1")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
