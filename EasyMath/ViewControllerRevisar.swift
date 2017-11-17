@@ -47,6 +47,7 @@ class ViewControllerRevisar: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRand(true)
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {

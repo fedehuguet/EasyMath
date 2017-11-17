@@ -26,6 +26,7 @@ class ViewControllerEje3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateRand(true)
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     

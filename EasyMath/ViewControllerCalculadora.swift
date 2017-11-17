@@ -34,6 +34,7 @@ class ViewControllerCalculadora: UIViewController {
     @IBOutlet weak var btnCalcular: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         //let tap = UITapGestureRecognizer(target: self, action: Selector(("quitaTeclado")))
         
