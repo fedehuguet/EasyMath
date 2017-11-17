@@ -11,6 +11,9 @@ import AVFoundation
 
 class ViewControllerTrigoN1: UIViewController {
     var player: AVAudioPlayer?
+    var alertController: UIAlertController?
+    var alertTimer: Timer?
+    var remainingTime = 0
     var arrEquations: [String] = ["cos", "sin"]
     @IBOutlet weak var equation: UILabel!
     @IBOutlet weak var coef: UILabel!
@@ -58,9 +61,19 @@ class ViewControllerTrigoN1: UIViewController {
             if equation.text == "sin" {
                 if (usign.text == "+" && ucoefeq.text == coef.text && uequation.text == "cos" && ucoef.text == coef.text) {
                     playSound()
-                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                    //            self.present(alert, animated: true, completion: nil)
+                    self.alertController = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                        self.alertController=nil;
+                        self.alertTimer?.invalidate()
+                        self.alertTimer=nil
+                    }
+                    
+                    self.alertController!.addAction(cancelAction)
+                    
+                    self.alertTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewControllerPolyN1.countDown), userInfo: nil, repeats: true)
+                    
+                    self.present(self.alertController!, animated: true, completion: nil)
                 }
                 else {
                     let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
@@ -100,6 +113,17 @@ class ViewControllerTrigoN1: UIViewController {
                 }
                 
             }
+        }
+    }
+    @objc func countDown() {
+        
+        self.remainingTime -= 1
+        if (self.remainingTime < 0) {
+            self.alertTimer?.invalidate()
+            self.alertTimer = nil
+            self.alertController!.dismiss(animated: true, completion: {
+                self.alertController = nil
+            })
         }
     }
     func resetVals(){

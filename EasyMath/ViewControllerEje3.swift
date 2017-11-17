@@ -11,6 +11,9 @@ import AVFoundation
 
 class ViewControllerEje3: UIViewController {
     var player: AVAudioPlayer?
+    var alertController: UIAlertController?
+    var alertTimer: Timer?
+    var remainingTime = 0
     var arrEquations: [String] = ["cos", "sin"]
     @IBOutlet weak var coef: UILabel!
     
@@ -49,6 +52,19 @@ class ViewControllerEje3: UIViewController {
         else {
             if coef.text == ucoef1.text && coef.text == uln.text {
                 playSound()
+                self.alertController = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                    self.alertController=nil;
+                    self.alertTimer?.invalidate()
+                    self.alertTimer=nil
+                }
+                
+                self.alertController!.addAction(cancelAction)
+                
+                self.alertTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewControllerPolyN1.countDown), userInfo: nil, repeats: true)
+                
+                self.present(self.alertController!, animated: true, completion: nil)
             }
             else {
                 let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
@@ -62,6 +78,17 @@ class ViewControllerEje3: UIViewController {
                 refreshAlert.addAction(UIAlertAction(title: "No, seguire intentando", style: .cancel, handler: nil))
                 present(refreshAlert, animated: true, completion: nil)
             }
+        }
+    }
+    @objc func countDown() {
+        
+        self.remainingTime -= 1
+        if (self.remainingTime < 0) {
+            self.alertTimer?.invalidate()
+            self.alertTimer = nil
+            self.alertController!.dismiss(animated: true, completion: {
+                self.alertController = nil
+            })
         }
     }
     func resetVals(){
