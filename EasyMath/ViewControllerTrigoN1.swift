@@ -122,4 +122,9 @@ class ViewControllerTrigoN1: UIViewController {
             print(error.localizedDescription)
         }
     }
+    @IBAction func showInfo(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "info") as! ViewControllerInfo
+        vc.backgroundIm = #imageLiteral(resourceName: "trigoejen1")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

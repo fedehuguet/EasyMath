@@ -44,6 +44,8 @@ class ViewControllerEje3: UIViewController {
             playSound()
         }
         else {
+            ccoef1.text = coef.text
+            cln.text = "ln (" + coef.text! + " )"
             showVals()
         }
     }
@@ -79,4 +81,9 @@ class ViewControllerEje3: UIViewController {
         }
     }
 
+    @IBAction func showInfo(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "info") as! ViewControllerInfo
+        vc.backgroundIm = #imageLiteral(resourceName: "expeje")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
