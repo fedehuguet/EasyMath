@@ -57,6 +57,16 @@ class ViewController: UIViewController, ProtocoloConfig {
         
         agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: "X_14x+3xyz"), d1: #imageLiteral(resourceName: " R_14x3xyz"), d2: #imageLiteral(resourceName: "R2_14x3xyz"), d3: #imageLiteral(resourceName: "R3_14x3xyz"), p1: #imageLiteral(resourceName: "P_14x3xyz"), p2: #imageLiteral(resourceName: "P2_14x3xyz"), p3: #imageLiteral(resourceName: "P3_14x3xyz"))
         
+        agregarLista(id: "Log", imgPro: #imageLiteral(resourceName: "log4x+2"), d1: #imageLiteral(resourceName: " R_log4x+2"), d2: #imageLiteral(resourceName: "R2_log4x+2"), d3: #imageLiteral(resourceName: "R3_log4x+2"), p1: #imageLiteral(resourceName: "P_log4x+2"), p2: #imageLiteral(resourceName: "P2_log4x+2"), p3: #imageLiteral(resourceName: "P3_log4x+2"))
+        
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "tanX"), d1: #imageLiteral(resourceName: "R_tanX"), d2: #imageLiteral(resourceName: "R2_tanX"), d3: #imageLiteral(resourceName: "TanXNueva"), p1: #imageLiteral(resourceName: "P_tanX"), p2: #imageLiteral(resourceName: "P2_tanX"), p3: #imageLiteral(resourceName: "P3_tanX"))
+        
+        agregarLista(id: "Exp", imgPro: #imageLiteral(resourceName: " ex5^x"), d1: #imageLiteral(resourceName: "R_ex5^x"), d2: #imageLiteral(resourceName: "R2_ex5^x"), d3: #imageLiteral(resourceName: "R3_ex5^x"), p1: #imageLiteral(resourceName: "P_ex5^x"), p2: #imageLiteral(resourceName: "P2_ex5^x"), p3: #imageLiteral(resourceName: "P3_ex5^x"))
+        
+        agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: " div1:22"), d1: #imageLiteral(resourceName: "R_ div1:22"), d2: #imageLiteral(resourceName: "R2_ex5^x"), d3: #imageLiteral(resourceName: "R3_ div1:22"), p1: #imageLiteral(resourceName: "P_ div1:22"), p2: #imageLiteral(resourceName: "P2_ div1:22"), p3: #imageLiteral(resourceName: "P3_ div1:22"))
+        
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "cosx^2"), d1: #imageLiteral(resourceName: "R_cos^2"), d2: #imageLiteral(resourceName: "R1_cos^2"), d3: #imageLiteral(resourceName: "P2_cos^2"), p1:#imageLiteral(resourceName: "P_cos^2"), p2: #imageLiteral(resourceName: "P1_cos^2"), p3: #imageLiteral(resourceName: "P3_cos^2"))
+        
         
         
         
