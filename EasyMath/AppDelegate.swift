@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        var storyBoard = grabStoryboard()// Change the storyboard name based on the device, you may need to write a condition here for that
+        var initialViewController: UIViewController = storyBoard.instantiateInitialViewController() as! UIViewController
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         UINavigationBar.appearance().barTintColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)
         UINavigationBar.appearance().tintColor = UIColor.black
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black]
@@ -43,7 +49,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    
+    func grabStoryboard() -> UIStoryboard {
+        let screenHeight = Int(UIScreen.main.bounds.size.height)
+        print(screenHeight)
+        var storyboard : UIStoryboard
+        
+        switch screenHeight {
+        case 568:
+            storyboard = UIStoryboard(name: "Main-SE", bundle: nil)
+            break;
+        case 736:
+            storyboard = UIStoryboard(name: "Main-8Plus", bundle: nil)
+            break;
+        default:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break;
+        }
+        return storyboard
+    }
+    
 
 }
 

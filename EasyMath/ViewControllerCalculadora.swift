@@ -93,7 +93,6 @@ class ViewControllerCalculadora: UIViewController {
         lblRespuesta.text = "0"
         lblDerivada.text = ""
         
-        txtEcuacionPoli.frame.origin = CGPoint(x: 16, y: 216)
     }
     @IBAction func CalcSeno(_ sender: UIButton) {
         borrarDatos()
@@ -124,10 +123,10 @@ class ViewControllerCalculadora: UIViewController {
     @IBAction func CalcCuadrada(_ sender: UIButton) {
         borrarDatos()
         btnCalcular.isHidden = false
-        modificaEcuacion(strLbl: "x", bHide: true)
+        modificaEcuacion(strLbl: "x     ", bHide: true)
         txtPol2.isHidden = false
         lblPotencia2.isHidden = false
-        txtEcuacionPoli.frame.origin = CGPoint(x: 6, y: 216)
+        //txtEcuacionPoli.frame.origin = CGPoint(x: 6, y: 216)
         bPoli = false
         bSeno = false
         bCos = false
