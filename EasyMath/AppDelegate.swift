@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
-        var storyBoard = grabStoryboard()// Change the storyboard name based on the device, you may need to write a condition here for that
-        var initialViewController: UIViewController = storyBoard.instantiateInitialViewController() as! UIViewController
+        let storyBoard = grabStoryboard()// Change the storyboard name based on the device, you may need to write a condition here for that
+        let initialViewController: UIViewController = storyBoard.instantiateInitialViewController() as! UIViewController
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         

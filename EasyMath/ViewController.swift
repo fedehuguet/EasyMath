@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController, ProtocoloConfig {
-    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     struct Problemas {
         let strID : String
         let imgProblema : UIImage

@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewControllerPasos: UIViewController {
-
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     var imagePasos : UIImage!
     @IBOutlet weak var imgPasos: UIImageView!
     override func viewDidLoad() {

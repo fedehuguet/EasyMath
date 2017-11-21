@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewControllerInfo: UIViewController {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     var backgroundIm: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()

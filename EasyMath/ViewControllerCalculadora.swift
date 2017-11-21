@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewControllerCalculadora: UIViewController {
-
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     var bPoli = false
     var bSeno = false
     var bCos = false

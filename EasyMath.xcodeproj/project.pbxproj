@@ -17,6 +17,7 @@
 		94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94270E9F1FB0DC70006074F5 /* TabBarController.swift */; };
 		942B39211F9D1CEC0011A206 /* ViewControllerRevisar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */; };
 		94322C621FBEA21B006395E9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94322C611FBEA21B006395E9 /* UIViewController+.swift */; };
+		945C56571FC48FDE000FAFAF /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C56561FC48FDE000FAFAF /* UINavigationController+.swift */; };
 		9490B9F21F9913E500B1B795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490B9F11F9913E500B1B795 /* AppDelegate.swift */; };
 		9490B9F41F9913E500B1B795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490B9F31F9913E500B1B795 /* ViewController.swift */; };
 		9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9490B9F51F9913E500B1B795 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		94270E9F1FB0DC70006074F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRevisar.swift; sourceTree = "<group>"; };
 		94322C611FBEA21B006395E9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		945C56561FC48FDE000FAFAF /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		9490B9EE1F9913E500B1B795 /* EasyMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9490B9F11F9913E500B1B795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9490B9F31F9913E500B1B795 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				9490B9F31F9913E500B1B795 /* ViewController.swift */,
 				942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */,
 				9490B9F51F9913E500B1B795 /* Main.storyboard */,
+				945C56561FC48FDE000FAFAF /* UINavigationController+.swift */,
 				94322C611FBEA21B006395E9 /* UIViewController+.swift */,
 				94A767781FBCBD1A00069E05 /* ViewControllerInfo.swift */,
 				94A767761FBCB72C00069E05 /* ViewControllerEje3.swift */,
@@ -196,6 +199,7 @@
 				94322C621FBEA21B006395E9 /* UIViewController+.swift in Sources */,
 				942B39211F9D1CEC0011A206 /* ViewControllerRevisar.swift in Sources */,
 				6DA2BC111F9BDA940069F24D /* TableViewController.swift in Sources */,
+				945C56571FC48FDE000FAFAF /* UINavigationController+.swift in Sources */,
 				94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */,
 				6D0636091F9D693300D16DF5 /* ViewControllerPasos.swift in Sources */,
 				941BDEFB1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift in Sources */,

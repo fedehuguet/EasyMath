@@ -12,7 +12,16 @@ protocol ProtocoloConfig
     func setConfig(b1:Bool,b2:Bool,b3:Bool,b4:Bool) -> Void
 }
 class ViewControllerConfig: UIViewController {
-    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     var delegado : ProtocoloConfig!
     var bLog : Bool!
     var bPoli : Bool!

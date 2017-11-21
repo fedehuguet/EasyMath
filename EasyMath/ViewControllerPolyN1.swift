@@ -8,8 +8,17 @@
 
 import UIKit
 import AVFoundation
-
 class ViewControllerPolyN1: UIViewController {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+    open override var shouldAutorotate: Bool {
+        get {
+            return false
+        }
+    }
     var player: AVAudioPlayer?
     var alertController: UIAlertController?
     var alertTimer: Timer?
