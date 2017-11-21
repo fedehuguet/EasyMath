@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         let storyBoard = grabStoryboard()// Change the storyboard name based on the device, you may need to write a condition here for that
-        let initialViewController: UIViewController = storyBoard.instantiateInitialViewController() as! UIViewController
+        let initialViewController: UIViewController = storyBoard.instantiateInitialViewController()!
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
