@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
         self.tableView.backgroundView = imageView
         let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
         arrContent = NSArray(contentsOfFile: path!)
+        self.title = "Ejercicios"
         
     }
 
