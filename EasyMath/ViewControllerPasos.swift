@@ -24,6 +24,7 @@ class ViewControllerPasos: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imgPasos.image = imagePasos
+        self.title = "Paso a paso"
         // Do any additional setup after loading the view.
     }
 

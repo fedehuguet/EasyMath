@@ -23,7 +23,8 @@ class ViewControllerCalculadora: UIViewController {
     var bSeno = false
     var bCos = false
     var bCuadrada = false
-    
+    var label : UILabel!
+    var xPos : CGFloat!
     @IBOutlet weak var lblValorX: UILabel!
     @IBOutlet weak var lblDerivada: UILabel!
     @IBOutlet weak var lblPotencia2: UILabel!
@@ -82,6 +83,7 @@ class ViewControllerCalculadora: UIViewController {
         btnCalcular.isHidden = true
         txtX.isHidden = true
         lblValorX.isHidden = true
+        xPos = txtEcuacionPoli.frame.origin.x
         // Do any additional setup after loading the view.
     }
     
@@ -107,6 +109,7 @@ class ViewControllerCalculadora: UIViewController {
         borrarDatos()
         btnCalcular.isHidden = false
         modificaEcuacion(strLbl: "        sin (        x)", bHide: true)
+        txtEcuacionPoli.frame.origin.x = xPos
         txtPol3.isHidden = false
         bPoli = false
         bSeno = true
@@ -120,7 +123,7 @@ class ViewControllerCalculadora: UIViewController {
         borrarDatos()
         btnCalcular.isHidden = false
         modificaEcuacion(strLbl: "x  +       x  +       x  +", bHide: false)
-        
+        txtEcuacionPoli.frame.origin.x = xPos
         bPoli = true
         bSeno = false
         bCos = false
@@ -132,10 +135,10 @@ class ViewControllerCalculadora: UIViewController {
     @IBAction func CalcCuadrada(_ sender: UIButton) {
         borrarDatos()
         btnCalcular.isHidden = false
-        modificaEcuacion(strLbl: "x     ", bHide: true)
+        modificaEcuacion(strLbl: "x", bHide: true)
         txtPol2.isHidden = false
         lblPotencia2.isHidden = false
-        //txtEcuacionPoli.frame.origin = CGPoint(x: 6, y: 216)
+        txtEcuacionPoli.frame.origin.x = 0;
         bPoli = false
         bSeno = false
         bCos = false
@@ -150,7 +153,7 @@ class ViewControllerCalculadora: UIViewController {
         btnCalcular.isHidden = false
         modificaEcuacion(strLbl: "        cos (        x)", bHide: true)
         txtPol3.isHidden = false
-        
+        txtEcuacionPoli.frame.origin.x = xPos
         bPoli = false
         bSeno = false
         bCos = true

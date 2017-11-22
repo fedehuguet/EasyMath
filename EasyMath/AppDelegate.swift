@@ -57,11 +57,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var storyboard : UIStoryboard
         
         switch screenHeight {
+        case 480:
+            storyboard = UIStoryboard(name: "Main-4s", bundle: nil)
+            break;
         case 568:
             storyboard = UIStoryboard(name: "Main-SE", bundle: nil)
             break;
         case 736:
             storyboard = UIStoryboard(name: "Main-8Plus", bundle: nil)
+            break;
+        case 1024:
+            storyboard = UIStoryboard(name: "Main-IpadMini", bundle: nil)
             break;
         default:
             storyboard = UIStoryboard(name: "Main", bundle: nil)
