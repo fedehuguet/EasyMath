@@ -19,6 +19,7 @@ class ViewControllerCalculadora: UIViewController {
             return false
         }
     }
+    @IBOutlet weak var lblXcuadrada: UILabel!
     var bPoli = false
     var bSeno = false
     var bCos = false
@@ -83,6 +84,7 @@ class ViewControllerCalculadora: UIViewController {
         btnCalcular.isHidden = true
         txtX.isHidden = true
         lblValorX.isHidden = true
+        lblXcuadrada.isHidden = true
         xPos = txtEcuacionPoli.frame.origin.x
         // Do any additional setup after loading the view.
     }
@@ -117,6 +119,7 @@ class ViewControllerCalculadora: UIViewController {
         bCuadrada = false
         txtX.isHidden = false
         lblValorX.isHidden = false
+        lblXcuadrada.isHidden = true
         
     }
     @IBAction func CalcPoli(_ sender: UIButton) {
@@ -130,21 +133,23 @@ class ViewControllerCalculadora: UIViewController {
         bCuadrada = false
         txtX.isHidden = false
         lblValorX.isHidden = false
+        lblXcuadrada.isHidden = true
         
     }
     @IBAction func CalcCuadrada(_ sender: UIButton) {
         borrarDatos()
         btnCalcular.isHidden = false
-        modificaEcuacion(strLbl: "x", bHide: true)
+        modificaEcuacion(strLbl: "", bHide: true)
         txtPol2.isHidden = false
         lblPotencia2.isHidden = false
-        txtEcuacionPoli.frame.origin.x = 0;
+        //txtEcuacionPoli.frame.origin.x = 0;
         bPoli = false
         bSeno = false
         bCos = false
         bCuadrada = true
         txtX.isHidden = false
         lblValorX.isHidden = false
+        lblXcuadrada.isHidden = false
         
     }
 
@@ -160,6 +165,7 @@ class ViewControllerCalculadora: UIViewController {
         bCuadrada = false
         txtX.isHidden = false
         lblValorX.isHidden = false
+        lblXcuadrada.isHidden = true
     }
     
     func verificaCalc() -> Bool {

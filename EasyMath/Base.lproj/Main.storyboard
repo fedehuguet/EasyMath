@@ -163,6 +163,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-qF-OK1">
+                                <rect key="frame" x="153" y="168" width="47" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87833553552627563" green="0.87848657369613647" blue="0.87832605838775635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -189,6 +196,7 @@
                         <outlet property="lblPotencia3" destination="saF-kJ-3e7" id="6TA-co-Isa"/>
                         <outlet property="lblRespuesta" destination="7tc-Ma-Xok" id="aIf-Vm-5nV"/>
                         <outlet property="lblValorX" destination="Kfp-6S-43V" id="vqR-Ig-Sf4"/>
+                        <outlet property="lblXcuadrada" destination="MTC-qF-OK1" id="ZjC-cC-DEA"/>
                         <outlet property="txtEcuacionPoli" destination="8tx-rN-Fo5" id="puX-Ac-Xui"/>
                         <outlet property="txtPol1" destination="2ks-So-1EQ" id="GLq-Hb-VQJ"/>
                         <outlet property="txtPol2" destination="Tcf-fw-l7V" id="6NZ-V9-oAf"/>
