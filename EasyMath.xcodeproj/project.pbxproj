@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D0636091F9D693300D16DF5 /* ViewControllerPasos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0636081F9D693300D16DF5 /* ViewControllerPasos.swift */; };
+		6D18C70C1FC6126300B50D87 /* Main-4s.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D18C7081FC6126300B50D87 /* Main-4s.storyboard */; };
+		6D18C70D1FC6126300B50D87 /* Main-IpadMini.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D18C70A1FC6126300B50D87 /* Main-IpadMini.storyboard */; };
 		6DA2BC111F9BDA940069F24D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2BC101F9BDA940069F24D /* TableViewController.swift */; };
 		6DD396131FBA1C65005D5378 /* ViewControllerCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD396121FBA1C65005D5378 /* ViewControllerCalculadora.swift */; };
 		6DD396151FBBF548005D5378 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		6D0636081F9D693300D16DF5 /* ViewControllerPasos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPasos.swift; sourceTree = "<group>"; };
+		6D18C7091FC6126300B50D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-4s.storyboard"; sourceTree = "<group>"; };
+		6D18C70B1FC6126300B50D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-IpadMini.storyboard"; sourceTree = "<group>"; };
 		6DA2BC101F9BDA940069F24D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6DD396121FBA1C65005D5378 /* ViewControllerCalculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCalculadora.swift; sourceTree = "<group>"; };
 		6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		9490B9F01F9913E500B1B795 /* EasyMath */ = {
 			isa = PBXGroup;
 			children = (
+				6D18C7081FC6126300B50D87 /* Main-4s.storyboard */,
+				6D18C70A1FC6126300B50D87 /* Main-IpadMini.storyboard */,
 				6DF185A21FBEB99F003A9CB8 /* Main-8Plus.storyboard */,
 				6DF185A01FBEB99F003A9CB8 /* Main-SE.storyboard */,
 				941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */,
@@ -179,10 +185,12 @@
 			files = (
 				6DF185A51FBEB9A0003A9CB8 /* Main-8Plus.storyboard in Resources */,
 				94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */,
+				6D18C70C1FC6126300B50D87 /* Main-4s.storyboard in Resources */,
 				6DF185A41FBEB9A0003A9CB8 /* Main-SE.storyboard in Resources */,
 				9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */,
 				9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */,
 				94B292221FBA1E1400A47DFC /* Property List.plist in Resources */,
+				6D18C70D1FC6126300B50D87 /* Main-IpadMini.storyboard in Resources */,
 				9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +224,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6D18C7081FC6126300B50D87 /* Main-4s.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D18C7091FC6126300B50D87 /* Base */,
+			);
+			name = "Main-4s.storyboard";
+			sourceTree = "<group>";
+		};
+		6D18C70A1FC6126300B50D87 /* Main-IpadMini.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D18C70B1FC6126300B50D87 /* Base */,
+			);
+			name = "Main-IpadMini.storyboard";
+			sourceTree = "<group>";
+		};
 		6DF185A01FBEB99F003A9CB8 /* Main-SE.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

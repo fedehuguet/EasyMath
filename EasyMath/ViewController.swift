@@ -101,7 +101,7 @@ class ViewController: UIViewController, ProtocoloConfig {
     }
     
     func filtrarLista() {
-        for (index, element) in imageList.enumerated() {
+        for (_, element) in imageList.enumerated() {
             if bLog && element.strID == "Log" {
                 lstFiltroEcuaciones.append(element)
             }

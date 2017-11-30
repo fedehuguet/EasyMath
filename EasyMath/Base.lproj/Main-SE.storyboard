@@ -150,8 +150,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x  +       x  +       x  +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tx-rN-Fo5">
-                                <rect key="frame" x="45" y="166" width="232" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x +       x  +       x  +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tx-rN-Fo5">
+                                <rect key="frame" x="32" y="166" width="257" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYE-VJ-S2j">
+                                <rect key="frame" x="134" y="172" width="31" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -173,6 +180,7 @@
                         <outlet property="lblPotencia3" destination="saF-kJ-3e7" id="6TA-co-Isa"/>
                         <outlet property="lblRespuesta" destination="7tc-Ma-Xok" id="aIf-Vm-5nV"/>
                         <outlet property="lblValorX" destination="Kfp-6S-43V" id="vqR-Ig-Sf4"/>
+                        <outlet property="lblXcuadrada" destination="DYE-VJ-S2j" id="CIp-Nz-A9G"/>
                         <outlet property="txtEcuacionPoli" destination="8tx-rN-Fo5" id="puX-Ac-Xui"/>
                         <outlet property="txtPol1" destination="2ks-So-1EQ" id="GLq-Hb-VQJ"/>
                         <outlet property="txtPol2" destination="Tcf-fw-l7V" id="6NZ-V9-oAf"/>
