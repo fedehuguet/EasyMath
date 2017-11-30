@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OsK-Yb-BNY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OsK-Yb-BNY">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1373,6 +1373,16 @@
                                     <action selector="cambiaConfig:" destination="w7h-So-aAw" eventType="valueChanged" id="zHW-Yi-PF7"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVh-p0-HgT">
+                                <rect key="frame" x="195" y="473" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.56754469029999999" blue="0.28624048559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Créditos"/>
+                                <connections>
+                                    <segue destination="QQq-kW-ql6" kind="show" id="UtG-ru-TXA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87833553549999999" green="0.87848657370000005" blue="0.8783260584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1zP-we-YaS"/>
@@ -1810,6 +1820,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03M-x0-CZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4644.375" y="546.12676056338034"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dHa-4T-Wq6">
+            <objects>
+                <viewController id="QQq-kW-ql6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7y-LX-7H7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="T7r-7h-jQA">
+                                <rect key="frame" x="16" y="53" width="288" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">EasyMath ha sido desarrollado por estudiantes del Tecnológico de Monterrey
+durante el semestre Agosto Diciembre de 2017, como parte del curso Desarrollo de
+Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez
+Treviño.
+
+Desarrolladores:
+Federico Miguel Huguet Mack
+Andrés Tamez Hdz
+
+EasyMath se distribuye como está de manera gratuita y se prohíbe su
+distribución y uso con fines de lucro</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qbL-dx-3de"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhX-6m-oUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2851.875" y="-153.16901408450704"/>
         </scene>
     </scenes>
     <resources>
