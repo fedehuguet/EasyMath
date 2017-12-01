@@ -69,7 +69,7 @@ class ViewControllerTrigoN1: UIViewController {
         }
         else {
             if equation.text == "sin" {
-                if (usign.text == "+" && ucoefeq.text == coef.text && uequation.text == "cos" && ucoef.text == coef.text) {
+                if (usign.text == "+" && ucoefeq.text == coef.text && uequation.text == "cos" && ucoef.text == coef.text && ux.text == "x") {
                     playSound()
                     self.alertController = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: .alert)
                     
@@ -93,6 +93,7 @@ class ViewControllerTrigoN1: UIViewController {
                         self.ccoefeq.text = self.coef.text
                         self.cequation.text = "cos"
                         self.ccoef.text = self.coef.text
+                        self.cx.text = "x"
                         self.showVals()
                     }))
                     
@@ -101,7 +102,7 @@ class ViewControllerTrigoN1: UIViewController {
                 }
             }
             else {
-                if (usign.text == "-" && ucoefeq.text == coef.text && uequation.text == "sin" && ucoef.text == coef.text) {
+                if (usign.text == "-" && ucoefeq.text == coef.text && uequation.text == "sin" && ucoef.text == coef.text && ux.text == "x") {
                     playSound()
                     //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
                     //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -115,6 +116,7 @@ class ViewControllerTrigoN1: UIViewController {
                         self.ccoefeq.text = self.coef.text
                         self.cequation.text = "sin"
                         self.ccoef.text = self.coef.text
+                        self.cx.text = "x"
                         self.showVals()
                     }))
                     
