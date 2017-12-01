@@ -76,8 +76,21 @@ class ViewController: UIViewController, ProtocoloConfig {
         
         agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "cosx^2"), d1: #imageLiteral(resourceName: "R_cos^2"), d2: #imageLiteral(resourceName: "R1_cos^2"), d3: #imageLiteral(resourceName: "P2_cos^2"), p1:#imageLiteral(resourceName: "P_cos^2"), p2: #imageLiteral(resourceName: "P1_cos^2"), p3: #imageLiteral(resourceName: "P3_cos^2"))
         
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "tan2x"), d1: #imageLiteral(resourceName: "R_tan2x"), d2: #imageLiteral(resourceName: "R2_tan2x"), d3: #imageLiteral(resourceName: "R3_tan2x"), p1: #imageLiteral(resourceName: "P_tan2x"), p2: #imageLiteral(resourceName: "P2_tan2x"), p3: #imageLiteral(resourceName: "P3_tan2x"))
         
+        agregarLista(id: "Exp", imgPro: #imageLiteral(resourceName: "exp2x"), d1: #imageLiteral(resourceName: "R_exp2x"), d2: #imageLiteral(resourceName: "R2_exp2x"), d3: #imageLiteral(resourceName: "R3_exp2x"), p1: #imageLiteral(resourceName: "P_exp2x") , p2: #imageLiteral(resourceName: "P2_exp2x"), p3: #imageLiteral(resourceName: "P3_exp2x"))
         
+        agregarLista(id: "Log", imgPro: #imageLiteral(resourceName: "ln2x3x"), d1: #imageLiteral(resourceName: "R_ln2x3x"), d2: #imageLiteral(resourceName: "R2_ln2x3x"), d3: #imageLiteral(resourceName: "R3_ln2x3x"), p1: #imageLiteral(resourceName: "P_ln2x3x"), p2: #imageLiteral(resourceName: "P2_ln2x3x"), p3: #imageLiteral(resourceName: "P3_ln2x3x"))
+        
+        agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: "2xx+3x"), d1: #imageLiteral(resourceName: "R_2xx+3x"), d2: #imageLiteral(resourceName: "R2_2xx+3x"), d3: #imageLiteral(resourceName: "R3_2xx+3x"), p1: #imageLiteral(resourceName: "P_2xx+3x"), p2: #imageLiteral(resourceName: "P2_2xx+3x"), p3: #imageLiteral(resourceName: "P3_2xx+3x"))
+        
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "sin2x3y"), d1: #imageLiteral(resourceName: "R_sin2x3y"), d2: #imageLiteral(resourceName: "R2_sin2x3y"), d3: #imageLiteral(resourceName: "R3_sin2x3y"), p1: #imageLiteral(resourceName: "P_sin2x3y"), p2: #imageLiteral(resourceName: "P2_sin2x3y"), p3: #imageLiteral(resourceName: "P3_sin2x3y"))
+        
+        agregarLista(id: "Log", imgPro: #imageLiteral(resourceName: "ln2x"), d1: #imageLiteral(resourceName: "R_ln2x"), d2: #imageLiteral(resourceName: "R2_ln2x"), d3: #imageLiteral(resourceName: "R3_ln2x"), p1: #imageLiteral(resourceName: "P_ln2x"), p2: #imageLiteral(resourceName: "P2_ln2x"), p3: #imageLiteral(resourceName: "P3_ln2x"))
+        
+        agregarLista(id: "Poli", imgPro: #imageLiteral(resourceName: "pol12x"), d1: #imageLiteral(resourceName: "R_pol12x"), d2: #imageLiteral(resourceName: "R2_pol12x"), d3: #imageLiteral(resourceName: "R3_pol12x"), p1: #imageLiteral(resourceName: "P_pol12x"), p2: #imageLiteral(resourceName: "P2_pol12x"), p3: #imageLiteral(resourceName: "P3_pol12x"))
+        
+        agregarLista(id: "Trig", imgPro: #imageLiteral(resourceName: "cosxy"), d1: #imageLiteral(resourceName: "R_cosxy"), d2: #imageLiteral(resourceName: "R2_cosxy"), d3: #imageLiteral(resourceName: "R3_cosxy"), p1: #imageLiteral(resourceName: "P_cosxy"), p2: #imageLiteral(resourceName: "P2_cosxy"), p3: #imageLiteral(resourceName: "P3_cosxy"))
         
         for index in 0...2 {
             segDerivada.setEnabled(false, forSegmentAt: index)
