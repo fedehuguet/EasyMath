@@ -15,6 +15,8 @@
 		6DD396151FBBF548005D5378 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */; };
 		6DF185A41FBEB9A0003A9CB8 /* Main-SE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF185A01FBEB99F003A9CB8 /* Main-SE.storyboard */; };
 		6DF185A51FBEB9A0003A9CB8 /* Main-8Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF185A21FBEB99F003A9CB8 /* Main-8Plus.storyboard */; };
+		6DFD64DD1FD0F45F00A9EB89 /* Main-Ipad3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFD64D91FD0F45E00A9EB89 /* Main-Ipad3.storyboard */; };
+		6DFD64DE1FD0F45F00A9EB89 /* Main-Ipad2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFD64DB1FD0F45E00A9EB89 /* Main-Ipad2.storyboard */; };
 		941BDEFB1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */; };
 		94270EA01FB0DC70006074F5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94270E9F1FB0DC70006074F5 /* TabBarController.swift */; };
 		942B39211F9D1CEC0011A206 /* ViewControllerRevisar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */; };
@@ -43,6 +45,8 @@
 		6DD396141FBBF548005D5378 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
 		6DF185A11FBEB99F003A9CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-SE.storyboard"; sourceTree = "<group>"; };
 		6DF185A31FBEB99F003A9CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-8Plus.storyboard"; sourceTree = "<group>"; };
+		6DFD64DA1FD0F45E00A9EB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-Ipad3.storyboard"; sourceTree = "<group>"; };
+		6DFD64DC1FD0F45E00A9EB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-Ipad2.storyboard"; sourceTree = "<group>"; };
 		941BDEFA1FBC0F3700EF6FCE /* ViewControllerTrigoN2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTrigoN2.swift; sourceTree = "<group>"; };
 		94270E9F1FB0DC70006074F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRevisar.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		9490B9F01F9913E500B1B795 /* EasyMath */ = {
 			isa = PBXGroup;
 			children = (
+				6DFD64DB1FD0F45E00A9EB89 /* Main-Ipad2.storyboard */,
+				6DFD64D91FD0F45E00A9EB89 /* Main-Ipad3.storyboard */,
 				6D18C7081FC6126300B50D87 /* Main-4s.storyboard */,
 				6D18C70A1FC6126300B50D87 /* Main-IpadMini.storyboard */,
 				6DF185A21FBEB99F003A9CB8 /* Main-8Plus.storyboard */,
@@ -187,11 +193,13 @@
 				94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */,
 				6D18C70C1FC6126300B50D87 /* Main-4s.storyboard in Resources */,
 				6DF185A41FBEB9A0003A9CB8 /* Main-SE.storyboard in Resources */,
+				6DFD64DE1FD0F45F00A9EB89 /* Main-Ipad2.storyboard in Resources */,
 				9490B9FC1F9913E500B1B795 /* LaunchScreen.storyboard in Resources */,
 				9490B9F91F9913E500B1B795 /* Assets.xcassets in Resources */,
 				94B292221FBA1E1400A47DFC /* Property List.plist in Resources */,
 				6D18C70D1FC6126300B50D87 /* Main-IpadMini.storyboard in Resources */,
 				9490B9F71F9913E500B1B795 /* Main.storyboard in Resources */,
+				6DFD64DD1FD0F45F00A9EB89 /* Main-Ipad3.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +262,22 @@
 				6DF185A31FBEB99F003A9CB8 /* Base */,
 			);
 			name = "Main-8Plus.storyboard";
+			sourceTree = "<group>";
+		};
+		6DFD64D91FD0F45E00A9EB89 /* Main-Ipad3.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFD64DA1FD0F45E00A9EB89 /* Base */,
+			);
+			name = "Main-Ipad3.storyboard";
+			sourceTree = "<group>";
+		};
+		6DFD64DB1FD0F45E00A9EB89 /* Main-Ipad2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFD64DC1FD0F45E00A9EB89 /* Base */,
+			);
+			name = "Main-Ipad2.storyboard";
 			sourceTree = "<group>";
 		};
 		9490B9F51F9913E500B1B795 /* Main.storyboard */ = {

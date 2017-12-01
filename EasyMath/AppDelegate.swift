@@ -69,6 +69,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case 1024:
             storyboard = UIStoryboard(name: "Main-IpadMini", bundle: nil)
             break;
+        case 1112:
+            storyboard = UIStoryboard(name: "Main-Ipad2", bundle: nil)
+            break;
+        case 1366:
+            storyboard = UIStoryboard(name: "Main-Ipad3", bundle: nil)
+            break;
         default:
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             break;
