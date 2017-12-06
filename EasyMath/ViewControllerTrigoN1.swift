@@ -104,9 +104,19 @@ class ViewControllerTrigoN1: UIViewController {
             else {
                 if (usign.text == "-" && ucoefeq.text == coef.text && uequation.text == "sin" && ucoef.text == coef.text && ux.text == "x") {
                     playSound()
-                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                    //            self.present(alert, animated: true, completion: nil)
+                    self.alertController = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                        self.alertController=nil;
+                        self.alertTimer?.invalidate()
+                        self.alertTimer=nil
+                    }
+                    
+                    self.alertController!.addAction(cancelAction)
+                    
+                    self.alertTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewControllerPolyN1.countDown), userInfo: nil, repeats: true)
+                    
+                    self.present(self.alertController!, animated: true, completion: nil)
                 }
                 else {
                     let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
@@ -145,6 +155,7 @@ class ViewControllerTrigoN1: UIViewController {
         ccoef.isHidden = true
         cx.isHidden = true
         usign.text = ""
+        ucoefeq.text = ""
         uequation.text = ""
         ucoef.text = ""
         ux.text = ""

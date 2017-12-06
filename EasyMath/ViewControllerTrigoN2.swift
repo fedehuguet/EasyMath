@@ -78,9 +78,19 @@ class ViewControllerTrigoN2: UIViewController {
             if equation.text == "sin" {
                 if (ucoef1.text == exp.text && ux1.text == "x" && Int(uexp1.text!)! == Int(exp.text!)!-1 && usign.text == "+" && uequat.text == "sinx" && ux2.text == "x" && uexp2.text == exp.text && uequat2.text == "cosx") {
                     playSound()
-                    //            let alert = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: UIAlertControllerStyle.alert)
-                    //            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                    //            self.present(alert, animated: true, completion: nil)
+                    self.alertController = UIAlertController(title: "Felicidades", message: "Respuesta correcta", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                        self.alertController=nil;
+                        self.alertTimer?.invalidate()
+                        self.alertTimer=nil
+                    }
+                    
+                    self.alertController!.addAction(cancelAction)
+                    
+                    self.alertTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewControllerPolyN1.countDown), userInfo: nil, repeats: true)
+                    
+                    self.present(self.alertController!, animated: true, completion: nil)
                 }
                 else {
                     let refreshAlert = UIAlertController(title: "Respuesta incorrecta", message: "¿Deseas ver la respuesta?", preferredStyle: UIAlertControllerStyle.alert)
