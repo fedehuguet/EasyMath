@@ -34,7 +34,6 @@
 		94B292241FBA1F6000A47DFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292231FBA1F6000A47DFC /* TableViewCell.swift */; };
 		94B292261FBA338700A47DFC /* ViewControllerTrigoN1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292251FBA338700A47DFC /* ViewControllerTrigoN1.swift */; };
 		94B292281FBA339500A47DFC /* ViewControllerPolyN1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B292271FBA339500A47DFC /* ViewControllerPolyN1.swift */; };
-		94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94E439F31F9D9BC300E794BA /* winSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +52,7 @@
 		94270E9F1FB0DC70006074F5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		942B39201F9D1CEC0011A206 /* ViewControllerRevisar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRevisar.swift; sourceTree = "<group>"; };
 		94322C611FBEA21B006395E9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		9443EE9720002F5200DA4A79 /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winSound.mp3; sourceTree = "<group>"; };
 		945C56561FC48FDE000FAFAF /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		9490B9EE1F9913E500B1B795 /* EasyMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9490B9F11F9913E500B1B795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 		94B292231FBA1F6000A47DFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		94B292251FBA338700A47DFC /* ViewControllerTrigoN1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTrigoN1.swift; sourceTree = "<group>"; };
 		94B292271FBA339500A47DFC /* ViewControllerPolyN1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPolyN1.swift; sourceTree = "<group>"; };
-		94E439F31F9D9BC300E794BA /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winSound.mp3; path = ../../../../../Downloads/winSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +126,8 @@
 				94B292211FBA1E1400A47DFC /* Property List.plist */,
 				9490B9F81F9913E500B1B795 /* Assets.xcassets */,
 				9490B9FA1F9913E500B1B795 /* LaunchScreen.storyboard */,
+				9443EE9720002F5200DA4A79 /* winSound.mp3 */,
 				9490B9FD1F9913E500B1B795 /* Info.plist */,
-				94E439F31F9D9BC300E794BA /* winSound.mp3 */,
 			);
 			path = EasyMath;
 			sourceTree = "<group>";
@@ -193,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF185A51FBEB9A0003A9CB8 /* Main-8Plus.storyboard in Resources */,
-				94E439F41F9D9BD200E794BA /* winSound.mp3 in Resources */,
 				6D18C70C1FC6126300B50D87 /* Main-4s.storyboard in Resources */,
 				6DF185A41FBEB9A0003A9CB8 /* Main-SE.storyboard in Resources */,
 				6DFD64DE1FD0F45F00A9EB89 /* Main-Ipad2.storyboard in Resources */,
